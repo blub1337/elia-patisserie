@@ -978,3 +978,31 @@ footer,.elia-footer{background:#302b27;color:#f7f5f1}
 
 /* Revert custom WebP hero parallax */
 .elia-reference-hero-image{transform:none;will-change:auto}
+
+
+/* Sofia & Stelios — wordmark sizing for the longer brand name */
+.elia-reference-header .wordmark{
+  font-size:clamp(24px,2.8vw,35px)!important;
+  white-space:nowrap;
+}
+.elia-reference-footer .footer-brand{
+  font-size:clamp(27px,3vw,36px);
+  white-space:nowrap;
+}
+.inner-page .site-header .wordmark{
+  width:auto!important;
+  min-width:0!important;
+  max-width:100%;
+  font-size:clamp(22px,2.6vw,32px)!important;
+  white-space:nowrap;
+}
+.inner-page footer .footer-brand{
+  font-size:clamp(26px,3vw,36px);
+  white-space:nowrap;
+}
+@media(max-width:600px){
+  .elia-reference-header .wordmark{font-size:24px!important}
+  .elia-reference-footer .footer-brand{font-size:29px}
+  .inner-page .site-header .wordmark{font-size:22px!important}
+  .inner-page footer .footer-brand{font-size:29px}
+}
