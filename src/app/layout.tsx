@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Élia Pâtisserie | Artisan Bakery & Pâtisserie in Agrinio",
-    template: "%s | Élia Pâtisserie"
+    default: "Sofia & Stelios | Pâtisserie in Kalyvia, Greece",
+    template: "%s | Sofia & Stelios"
   },
   description:
-    "Discover the art of fine baking and delicate pâtisserie. Artisan creations, crafted with passion in Agrinio, Greece.",
+    "Discover the art of fine baking and delicate pâtisserie at Sofia & Stelios in Kalyvia, Greece.",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: ["/favicon.svg"],
     apple: [{ url: "/favicon.svg", type: "image/svg+xml" }]
   },
   openGraph: {
-    title: "Élia Pâtisserie",
+    title: "Sofia & Stelios",
     description: "A taste of art. Crafted with passion.",
     type: "website",
     locale: "el_GR"
