@@ -593,3 +593,149 @@ footer{padding-top:85px}
   .collection-detail-hero>img{height:350px}
   .collection-detail-hero>div{padding:45px 7% 55px}
 }
+
+
+/* ÉLIA — bespoke digital flagship, 2026 */
+.elia-home{overflow:hidden;background:#f7f4ee}
+.elia-home .site-header{height:82px;min-height:82px}
+.elia-home .announcement{height:28px;font-size:8px;letter-spacing:.2em}
+.elia-home .elia-hero{height:min(790px,calc(100svh - 110px));min-height:620px;position:relative;display:flex;align-items:center;color:#fff;background:#2d241f;isolation:isolate}
+.elia-hero>img{object-fit:cover;object-position:center 48%;z-index:-2;animation:eliaHeroReveal 1.2s ease both}
+.elia-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,17,14,.72) 0%,rgba(22,17,14,.36) 44%,rgba(22,17,14,.02) 100%),linear-gradient(0deg,rgba(20,15,12,.35),transparent 35%);z-index:-1}
+.elia-hero-copy{width:min(750px,76%);margin-left:11%;padding:60px 0 30px;animation:eliaTextReveal .9s .15s both}
+.elia-hero-copy .eyebrow{font-size:9px;letter-spacing:.24em;margin-bottom:32px}
+.elia-hero-copy .eyebrow:before{content:"";display:inline-block;width:35px;height:1px;background:#d5bd98;vertical-align:middle;margin-right:14px}
+.elia-hero-copy h1{font:400 clamp(76px,10vw,148px)/.82 'Cormorant Garamond',serif;letter-spacing:-.055em;margin:0;max-width:850px}
+.elia-hero-copy h1 em{font-weight:400;color:#e5cda8}
+.elia-hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.9;letter-spacing:.015em;color:#f4eee7;max-width:370px;margin:34px 0 34px}
+.elia-hero-link{display:inline-flex;align-items:center;gap:42px;border-bottom:1px solid rgba(255,255,255,.65);padding:0 0 13px;font-size:9px;letter-spacing:.16em;font-weight:600}
+.elia-hero-link span{font-size:18px;color:#e5cda8;transition:transform .25s}
+.elia-hero-link:hover span{transform:translate(4px,-3px)}
+.elia-hero-meta{position:absolute;left:5.5%;right:5.5%;bottom:29px;display:flex;justify-content:space-between;align-items:center;font-size:8px;letter-spacing:.17em;color:#eee4d8}
+.elia-hero-meta a{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:7px}
+.elia-hero-side{position:absolute;right:25px;top:50%;writing-mode:vertical-rl;transform:translateY(-50%);font-size:7px;letter-spacing:.24em;color:#eee4d8}
+.elia-marquee{overflow:hidden;background:#b99a68;color:#2e241d;padding:15px 0;white-space:nowrap}
+.elia-marquee>div{display:flex;width:max-content;animation:eliaMarquee 36s linear infinite}
+.elia-marquee span{font-size:8px;letter-spacing:.22em;font-weight:600;padding:0 32px}
+.elia-marquee b{font-size:12px;margin-left:62px;font-weight:400}
+.elia-manifesto{padding:clamp(95px,12vw,175px) 11%;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(55px,10vw,155px);align-items:center;background:#f7f4ee}
+.elia-manifesto-image{position:relative;min-width:0}
+.elia-manifesto-image img{display:block;width:100%;height:clamp(450px,55vw,690px);object-fit:cover}
+.elia-manifesto-image>span{position:absolute;bottom:0;left:0;background:#f7f4ee;padding:13px 17px;font-size:7px;letter-spacing:.17em}
+.elia-manifesto-copy{position:relative;max-width:510px;padding:35px 0}
+.elia-manifesto-copy .eyebrow,.elia-section-head .eyebrow,.elia-bespoke-copy .eyebrow,.elia-visit .eyebrow{font-size:8px;letter-spacing:.22em;margin-bottom:26px}
+.elia-manifesto-copy h2,.elia-section-head h2,.elia-bespoke-copy h2,.elia-visit h2{font:400 clamp(54px,6.3vw,88px)/.91 'Cormorant Garamond',serif;letter-spacing:-.045em;margin:0;color:#302019}
+.elia-manifesto-copy h2 em,.elia-section-head h2 em,.elia-bespoke-copy h2 em,.elia-visit h2 em{color:#a98757}
+.elia-body{font-size:12px;line-height:2.1;color:#786b60;max-width:390px;margin:34px 0}
+.elia-underlink{display:inline-flex;align-items:center;gap:35px;border-bottom:1px solid #b99a68;padding-bottom:11px;font-size:8px;letter-spacing:.16em;font-weight:600}
+.elia-underlink span{color:#a98757;font-size:16px;transition:transform .25s}
+.elia-underlink:hover span{transform:translate(4px,-3px)}
+.elia-manifesto-index{position:absolute;right:0;bottom:-35px;color:#e6ded2;font:italic 140px/.8 'Cormorant Garamond',serif;z-index:0;pointer-events:none}
+.elia-collections{padding:clamp(95px,11vw,155px) 8% 115px;background:#eee8de}
+.elia-section-head{display:grid;grid-template-columns:1fr minmax(220px,.5fr);gap:45px;align-items:end;margin-bottom:55px}
+.elia-section-head .eyebrow{grid-column:1/-1;margin-bottom:-20px}
+.elia-section-head h2{font-size:clamp(52px,6.4vw,88px)}
+.elia-section-head>p{font-size:11px;line-height:2;color:#786b60;max-width:290px;margin:0 0 7px}
+.elia-mosaic{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:330px 300px;gap:18px}
+.elia-tile{position:relative;overflow:hidden;isolation:isolate;color:white;background:#4a382e}
+.elia-tile img{object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.elia-tile:hover img{transform:scale(1.045)}
+.elia-tile-one{grid-row:1/3}
+.elia-tile-two{grid-column:2;grid-row:1}
+.elia-tile-three{grid-column:2;grid-row:2}
+.elia-tile-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,14,12,.65),transparent 55%),linear-gradient(180deg,rgba(18,14,12,.15),transparent 30%);z-index:-1}
+.elia-tile-number{position:absolute;top:22px;left:24px;font-size:8px;letter-spacing:.18em;color:#f0d7b1}
+.elia-tile-title{position:absolute;left:27px;right:24px;bottom:26px;display:flex;justify-content:space-between;align-items:center;font:400 clamp(28px,3.5vw,46px)/1 'Cormorant Garamond',serif}
+.elia-tile-title i{font:normal 18px 'DM Sans',sans-serif;color:#e8cda7;transition:transform .25s}
+.elia-tile:hover .elia-tile-title i{transform:translate(4px,-4px)}
+.elia-tile-note{position:absolute;left:28px;bottom:10px;font-size:8px;letter-spacing:.12em;color:#e9dfd4}
+.elia-tile-one .elia-tile-title{font-size:clamp(40px,5vw,68px);bottom:42px}
+.elia-tile-one .elia-tile-note{bottom:20px}
+.elia-all-link{display:flex;width:max-content;gap:38px;align-items:center;margin:40px auto 0;border-bottom:1px solid #b99a68;padding-bottom:11px;font-size:8px;letter-spacing:.16em;font-weight:600}
+.elia-all-link span{font-size:16px;color:#a98757}
+.elia-bespoke{position:relative;display:grid;grid-template-columns:1.05fr .95fr;min-height:650px;background:#302019;color:#f7f2e9}
+.elia-bespoke-image{position:relative;min-height:650px;overflow:hidden}
+.elia-bespoke-image img{object-fit:cover}
+.elia-bespoke-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:90px clamp(45px,8vw,120px)}
+.elia-bespoke-copy .eyebrow{color:#d1b58c}
+.elia-bespoke-copy h2{color:#f7f2e9;font-size:clamp(50px,5.6vw,78px)}
+.elia-bespoke-copy h2 em{color:#d0b18a}
+.elia-bespoke-copy>p:not(.eyebrow){font-size:11px;line-height:2.1;color:#d3c5b6;max-width:380px;margin:30px 0}
+.elia-dark-link{display:inline-flex;gap:30px;align-items:center;border-bottom:1px solid #c5a77d;padding-bottom:12px;font-size:8px;letter-spacing:.14em;font-weight:600}
+.elia-dark-link span{font-size:17px;color:#d5b88f}
+.elia-bespoke-mark{position:absolute;right:4%;bottom:2%;font:italic 100px 'Cormorant Garamond',serif;color:rgba(255,255,255,.07);pointer-events:none}
+.elia-visit{padding:clamp(90px,11vw,150px) 12%;display:flex;align-items:center;justify-content:space-between;background:#f7f4ee}
+.elia-visit>div{max-width:650px}
+.elia-visit h2{font-size:clamp(52px,6vw,82px)}
+.elia-visit>div>p:not(.eyebrow){font-size:11px;line-height:2;color:#786b60;max-width:390px;margin:30px 0}
+.elia-visit-word{font:400 12px/1.8 'DM Sans',sans-serif;letter-spacing:.2em;color:#b99a68;text-align:right;border-top:1px solid #b99a68;border-bottom:1px solid #b99a68;padding:13px 0}
+.elia-footer{background:#211914;color:#f7f2e9;padding:70px 8% 20px}
+.elia-footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;padding-bottom:60px}
+.elia-footer-top .footer-brand{align-items:flex-start}
+.elia-footer-top>p{font:italic 20px 'Cormorant Garamond',serif;color:#cbbba8;text-align:center}
+.elia-footer-contact{justify-self:end;border-bottom:1px solid #b99a68;padding-bottom:10px;font-size:8px;letter-spacing:.15em}
+.elia-footer-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:17px;display:flex;justify-content:space-between;align-items:center;font-size:7px;letter-spacing:.15em;color:#b9aa99}
+.elia-footer-bottom>div{display:flex;gap:20px}
+.elia-footer-bottom a{color:#d7c4ad}
+@keyframes eliaMarquee{to{transform:translateX(-50%)}}
+@keyframes eliaHeroReveal{from{transform:scale(1.045);opacity:.7}to{transform:scale(1);opacity:1}}
+@keyframes eliaTextReveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.elia-marquee>div,.elia-hero>img,.elia-hero-copy{animation:none!important}.elia-tile img,.elia-hero-link span,.elia-underlink span{transition:none}}
+@media(max-width:800px){
+ .elia-home .site-header{height:76px;min-height:76px}
+ .elia-hero{height:700px;min-height:620px}
+ .elia-hero-copy{margin-left:8%;width:82%}
+ .elia-hero-copy h1{font-size:clamp(76px,12vw,110px)}
+ .elia-manifesto{padding:90px 8%;gap:45px}
+ .elia-manifesto-image img{height:500px}
+ .elia-section-head{grid-template-columns:1fr .65fr;gap:22px}
+ .elia-mosaic{grid-template-rows:280px 250px}
+ .elia-bespoke{min-height:0}
+ .elia-bespoke-image{min-height:570px}
+ .elia-bespoke-copy{padding:60px 8%}
+}
+@media(max-width:600px){
+ .elia-home .announcement{height:27px}
+ .elia-home .site-header{height:auto;min-height:72px}
+ .elia-hero{height:680px;min-height:600px}
+ .elia-hero>img{object-position:58% center}
+ .elia-hero-shade{background:linear-gradient(90deg,rgba(22,17,14,.65),rgba(22,17,14,.12)),linear-gradient(0deg,rgba(20,15,12,.45),transparent 55%)}
+ .elia-hero-copy{margin-left:7%;width:86%;padding-top:0}
+ .elia-hero-copy .eyebrow{font-size:7px;letter-spacing:.15em;margin-bottom:27px}
+ .elia-hero-copy h1{font-size:clamp(70px,17vw,100px)}
+ .elia-hero-copy>p:not(.eyebrow){font-size:12px;max-width:310px;margin:27px 0}
+ .elia-hero-meta{left:7%;right:7%;font-size:6px;letter-spacing:.12em}
+ .elia-hero-side{display:none}
+ .elia-marquee{padding:12px 0}
+ .elia-marquee span{font-size:7px;padding:0 20px}
+ .elia-marquee b{margin-left:35px}
+ .elia-manifesto{grid-template-columns:1fr;padding:75px 7%;gap:35px}
+ .elia-manifesto-image img{height:420px}
+ .elia-manifesto-copy{padding:15px 0 30px}
+ .elia-manifesto-copy h2,.elia-section-head h2,.elia-bespoke-copy h2,.elia-visit h2{font-size:clamp(52px,13vw,68px)}
+ .elia-body{font-size:11px;margin:25px 0}
+ .elia-manifesto-index{font-size:90px;bottom:-25px}
+ .elia-collections{padding:78px 6% 85px}
+ .elia-section-head{display:block;margin-bottom:35px}
+ .elia-section-head .eyebrow{margin-bottom:20px}
+ .elia-section-head>p{margin-top:22px}
+ .elia-mosaic{grid-template-columns:1fr;grid-template-rows:430px 300px 300px;gap:12px}
+ .elia-tile-one,.elia-tile-two,.elia-tile-three{grid-column:1;grid-row:auto}
+ .elia-tile-one .elia-tile-title{font-size:42px;bottom:40px}
+ .elia-tile-title{font-size:32px;left:19px;bottom:25px}
+ .elia-tile-note{left:20px}
+ .elia-bespoke{grid-template-columns:1fr}
+ .elia-bespoke-image{min-height:390px;height:390px}
+ .elia-bespoke-copy{padding:70px 7% 80px}
+ .elia-bespoke-copy>p:not(.eyebrow){font-size:11px}
+ .elia-bespoke-mark{font-size:70px}
+ .elia-visit{padding:75px 7%;gap:20px}
+ .elia-visit-word{font-size:8px;flex-shrink:0}
+ .elia-footer{padding:55px 7% 18px}
+ .elia-footer-top{grid-template-columns:1fr;gap:22px;text-align:center;padding-bottom:40px}
+ .elia-footer-top .footer-brand{align-items:center}
+ .elia-footer-top>p{margin:0}
+ .elia-footer-contact{justify-self:center}
+ .elia-footer-bottom{gap:13px;flex-wrap:wrap;font-size:6px}
+ .elia-footer-bottom>div{width:100%;justify-content:center}
+}
