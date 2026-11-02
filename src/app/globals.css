@@ -115,3 +115,25 @@ footer{background:var(--espresso);color:var(--cream);padding:65px 8% 20px}
 .product-disclaimer{font-size:10px;color:var(--muted);line-height:1.8;margin:25px auto 28px;max-width:620px}
 @media(max-width:800px){.collection-detail-hero{grid-template-columns:1fr 1fr}.collection-detail-hero>img{height:460px}.collection-detail-hero>div{padding:45px 9%}.product-facts{gap:12px}.product-facts article{padding:22px 17px}}
 @media(max-width:600px){.collection-detail-hero{grid-template-columns:1fr}.collection-detail-hero>img{height:340px}.collection-detail-hero>div{padding:48px 8% 55px}.collection-detail-hero h1{font-size:54px}.collection-information{padding:65px 7% 80px}.collection-information-heading h2{font-size:42px}.product-facts{grid-template-columns:1fr}.product-facts article{min-height:0;padding:23px}}
+
+
+/* Consistent navigation sizing across every page and locale */
+.site-header{height:88px;min-height:88px;padding-left:5%;padding-right:5%;gap:clamp(14px,2vw,28px)}
+.wordmark{flex:0 0 112px}
+.nav-links,.inner-nav{flex:1 1 auto;min-width:0;display:flex;align-items:center;justify-content:center;gap:clamp(8px,1.25vw,18px);white-space:nowrap}
+.nav-links a,.inner-nav a{flex:0 0 auto;font-size:clamp(7px,.68vw,9px);letter-spacing:.07em;line-height:1.2}
+.language-switch{flex:0 0 auto;white-space:nowrap}
+@media(max-width:1100px) and (min-width:601px){
+  .site-header{padding-left:3%;padding-right:3%;gap:12px}
+  .wordmark{flex-basis:94px;font-size:32px}
+  .nav-links,.inner-nav{gap:8px}
+  .nav-links a,.inner-nav a{font-size:7px;letter-spacing:.04em}
+}
+@media(max-width:600px){
+  .site-header{height:auto;min-height:74px;padding:12px 5%;gap:12px;flex-wrap:wrap}
+  .menu-toggle{display:none}
+  .nav-links,.inner-nav{order:3;display:flex;position:static;width:100%;flex:0 0 100%;overflow-x:auto;justify-content:flex-start;gap:20px;padding:10px 0 4px;box-shadow:none;flex-direction:row;scrollbar-width:none}
+  .nav-links::-webkit-scrollbar,.inner-nav::-webkit-scrollbar{display:none}
+  .nav-links a,.inner-nav a{flex:0 0 auto;white-space:nowrap;font-size:8px;letter-spacing:.07em}
+  .wordmark{flex:0 0 auto}
+}
