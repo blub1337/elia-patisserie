@@ -2,7 +2,8 @@ import { useSyncExternalStore } from "react";
 
 export type Locale = "en" | "el";
 
-const STORAGE_KEY = "elia-locale";
+// Version the key so visitors who previously had English saved get the new Greek default.
+const STORAGE_KEY = "elia-locale-v2";
 const CHANGE_EVENT = "elia-locale-change";
 
 function getLocaleSnapshot(): Locale {
