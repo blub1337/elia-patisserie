@@ -29,7 +29,7 @@ const content = {
 } as const;
 
 export default function BrandPage({ kind }: { kind: PageKind }) {
-  const [locale,setLocale] = useState<"en"|"el">("en");
+  const [locale,setLocale] = useState<"en"|"el">("el");
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
