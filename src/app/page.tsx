@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const content = {
   en: {
-    nav:["About","Creations","Custom cakes","Gallery","Contact"],
+    nav:["Home","About","Creations","Custom cakes","Gallery","Contact"],
     eyebrow:"ARTISAN PÂTISSERIE · KALYVIA, GREECE",
     title:<>A little taste<br/>of <em>something special.</em></>,
     intro:"Thoughtful details, beautiful flavours and handmade creations for life's sweetest moments.",
@@ -34,7 +34,7 @@ const content = {
   },
   el: {
     nav:["Αρχική","Σχετικά με εμάς","Δημιουργίες","Τούρτες κατά παραγγελία","Φωτογραφίες","Επικοινωνία"],
-    eyebrow:"ΖΑΧΑΡΟΠΛΑΣΤΙΚΗ & ΑΡΤΟΠΟΙΙΑ · ΑΓΡΙΝΙΟ",
+    eyebrow:"ΖΑΧΑΡΟΠΛΑΣΤΙΚΗ & ΑΡΤΟΠΟΙΙΑ · ΚΑΛΥΒΙΑ",
     title:<>Μια γεύση<br/>από κάτι <em>ξεχωριστό.</em></>,
     intro:"Προσεγμένες λεπτομέρειες, υπέροχες γεύσεις και χειροποίητες δημιουργίες για τις πιο γλυκές στιγμές της ζωής.",
     cta:"ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ",
