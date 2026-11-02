@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Locale = "en" | "el";
 
@@ -107,10 +108,10 @@ export default function Home() {
         </div>
         <div className="collection-grid">
           {[photos.pastry, photos.cake, photos.viennoiserie].map((photo, i) => (
-            <a className="collection-card" href="/creations" key={photo}>
+            <Link className="collection-card" href="/creations" key={photo}>
               <div className="collection-photo"><img src={photo} alt={t.items[i]} /><span className="card-arrow">↗</span></div>
               <div className="collection-label"><span>0{i + 1}</span><h3>{t.items[i]}</h3></div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
