@@ -76,6 +76,7 @@ export default function Home(){
   const t=content[locale];
   const links=["/our-story","/creations","/custom-cakes","/gallery","/contact"];
   return <main className="elia-home elia-reference-home">
+    <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} <span>✳</span></div>
     <header className="site-header elia-reference-header">
       <Link className="wordmark" href="/" aria-label="Élia Pâtisserie home">Élia<span>PÂTISSERIE</span></Link>
       <button className="menu-toggle" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
