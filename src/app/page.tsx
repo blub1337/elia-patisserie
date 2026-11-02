@@ -28,7 +28,7 @@ const copy = {
     visitText: "We would love to welcome you. Find us in the heart of Agrinio and discover your next favourite.",
     contact: "GET IN TOUCH",
     footer: "Made with care. Shared with joy.",
-    nav: ["Home", "Creations", "Our story", "Visit us"]
+    nav: ["Home", "Creations", "Our story", "Custom cakes", "Gallery", "Contact"]
   },
   el: {
     eyebrow: "ΑΡΤΟΠΟΙΙΑ & ΖΑΧΑΡΟΠΛΑΣΤΙΚΗ · ΑΓΡΙΝΙΟ",
@@ -51,7 +51,7 @@ const copy = {
     visitText: "Θα χαρούμε να σας καλωσορίσουμε. Επισκεφθείτε μας στο Αγρίνιο και ανακαλύψτε την αγαπημένη σας γεύση.",
     contact: "ΕΠΙΚΟΙΝΩΝΙΑ",
     footer: "Με φροντίδα δημιουργημένα. Με χαρά μοιρασμένα.",
-    nav: ["Αρχική", "Δημιουργίες", "Η ιστορία μας", "Επίσκεψη"]
+    nav: ["Αρχική", "Δημιουργίες", "Η ιστορία μας", "Τούρτες κατά παραγγελία", "Gallery", "Επικοινωνία"]
   }
 };
 
@@ -78,7 +78,7 @@ export default function Home() {
         <a className="wordmark" href="#home" aria-label="Élia Pâtisserie home">Élia<span>PÂTISSERIE</span></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
-          {t.nav.map((label, i) => <a key={label} href={["/", "/creations", "/our-story", "/contact"][i]} onClick={() => setMenuOpen(false)}>{label}</a>)}
+          {t.nav.map((label, i) => <a key={label} href={["/", "/creations", "/our-story", "/custom-cakes", "/gallery", "/contact"][i]} onClick={() => setMenuOpen(false)}>{label}</a>)}
         </nav>
         <button className="language-switch" onClick={() => saveLocale(locale === "en" ? "el" : "en")} aria-label="Change language">{locale === "en" ? "ΕΛ" : "EN"} <span>↗</span></button>
       </header>
