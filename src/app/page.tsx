@@ -75,10 +75,10 @@ export default function Home() {
     <main>
       <div className="announcement"><span>✳</span> {locale === "en" ? "A little sweetness, made in Agrinio." : "Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} <span>✳</span></div>
       <header className="site-header">
-        <a className="wordmark" href="#home" aria-label="Élia Pâtisserie home">Élia<span>PÂTISSERIE</span></a>
+        <Link className="wordmark" href="/" aria-label="Élia Pâtisserie home">Élia<span>PÂTISSERIE</span></Link>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
-          {t.nav.map((label, i) => <a key={label} href={["/", "/creations", "/our-story", "/custom-cakes", "/gallery", "/contact"][i]} onClick={() => setMenuOpen(false)}>{label}</a>)}
+          {t.nav.map((label, i) => <Link key={label} href={["/", "/creations", "/our-story", "/custom-cakes", "/gallery", "/contact"][i]} onClick={() => setMenuOpen(false)}>{label}</Link>)}
         </nav>
         <button className="language-switch" onClick={() => saveLocale(locale === "en" ? "el" : "en")} aria-label="Change language">{locale === "en" ? "ΕΛ" : "EN"} <span>↗</span></button>
       </header>
@@ -100,7 +100,7 @@ export default function Home() {
           <p className="eyebrow">{t.story}</p>
           <h2>{t.featured}<br /><em>{t.featuredItalic}</em></h2>
           <p>{t.featuredText}</p>
-          <a className="text-link" href="/our-story">{locale === "en" ? "A LITTLE MORE ABOUT US" : "ΛΙΓΑ ΛΟΓΙΑ ΓΙΑ ΕΜΑΣ"} <span>↗</span></a>
+          <Link className="text-link" href="/our-story">{locale === "en" ? "A LITTLE MORE ABOUT US" : "ΛΙΓΑ ΛΟΓΙΑ ΓΙΑ ΕΜΑΣ"} <span>↗</span></Link>
           <div className="ornament">✳</div>
         </div>
       </section>
@@ -133,7 +133,7 @@ export default function Home() {
           <p className="eyebrow">{t.cta}</p>
           <h2>{locale === "en" ? <>Made for your<br /><em>moments.</em></> : <>Δημιουργίες για<br /><em>τις στιγμές σας.</em></>}</h2>
           <p>{t.ctaText}</p>
-          <a className="button button-dark" href="/custom-cakes">{t.enquire} <span>↗</span></a>
+          <Link className="button button-dark" href="/custom-cakes">{t.enquire} <span>↗</span></Link>
         </div>
       </section>
 
@@ -142,14 +142,14 @@ export default function Home() {
           <p className="eyebrow">{t.visit}</p>
           <h2>{t.visitTitle}</h2>
           <p>{t.visitText}</p>
-          <a className="text-link" href="/contact">{t.contact} <span>↗</span></a>
+          <Link className="text-link" href="/contact">{t.contact} <span>↗</span></Link>
         </div>
         <div className="visit-stamp"><span>É</span><small>AGRINIO<br />GREECE</small></div>
       </section>
 
       <footer id="contact">
         <div className="footer-main">
-          <a className="footer-brand" href="#home">Élia<span>PÂTISSERIE</span></a>
+          <Link className="footer-brand" href="/">Élia<span>PÂTISSERIE</span></Link>
           <p>{t.footer}</p>
           <span className="footer-contact">CONTACT DETAILS TO BE CONFIRMED</span>
         </div>
