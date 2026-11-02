@@ -855,3 +855,105 @@ footer,.elia-footer{background:#302b27;color:#f7f5f1}
   .elia-hero-shade{background:linear-gradient(0deg,rgba(37,32,29,.58),rgba(37,32,29,.12) 100%)}
   .elia-manifesto,.elia-bespoke{background:#e9e3dc}
 }
+
+
+/* ÉLIA — editorial bakery layout inspired by the reference, with an original taupe identity */
+.elia-reference-home{background:#f7f5f1;color:#302b27}
+.elia-reference-header{height:94px!important;padding-inline:8%!important;display:grid!important;grid-template-columns:1fr auto 1fr;gap:35px}
+.elia-reference-header .wordmark{justify-self:start;font-family:'Bodoni Moda',serif;font-size:42px}
+.elia-reference-header .nav-links{gap:clamp(18px,3vw,42px)}
+.elia-reference-header .nav-links a{font-size:9px;letter-spacing:.13em;color:#5e534b}
+.elia-reference-header .language-switch{justify-self:end}
+.elia-reference-hero{height:min(760px,76vw);min-height:590px;position:relative;isolation:isolate;display:flex;align-items:center;color:#fff;background:#65584f}
+.elia-reference-hero>img{object-fit:cover;object-position:center 52%;z-index:-2}
+.elia-reference-hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(35,30,26,.66),rgba(35,30,26,.22) 62%,rgba(35,30,26,.04))}
+.elia-reference-hero-copy{margin-left:12%;max-width:690px;padding:50px 0}
+.elia-reference-hero-copy .eyebrow{color:#e5d9cf;font-size:9px;letter-spacing:.22em;margin-bottom:28px}
+.elia-reference-hero-copy h1{font:400 clamp(62px,8vw,112px)/.94 'Bodoni Moda',serif;letter-spacing:-.055em;margin:0;color:#fffaf6}
+.elia-reference-hero-copy h1 em{font-style:italic;color:#e0d2c6}
+.elia-reference-hero-copy>p:not(.eyebrow){font-size:13px;line-height:2;max-width:400px;color:#f2ece6;margin:27px 0 32px}
+.elia-reference-button{display:inline-flex;align-items:center;gap:35px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.7);font-size:9px;letter-spacing:.14em;font-weight:600;color:#fff}
+.elia-reference-button span{font-size:17px;color:#e0d2c6}
+.elia-reference-hero-caption{position:absolute;bottom:27px;left:8%;font-size:8px;letter-spacing:.2em;color:#eee5dc}
+.elia-reference-about{padding:clamp(80px,10vw,145px) 11%;display:grid;grid-template-columns:.9fr 1.1fr;gap:9%;align-items:center;background:#e9e1d9}
+.elia-reference-about-copy{max-width:470px}
+.elia-reference-about-copy .eyebrow,.elia-reference-heading .eyebrow,.elia-reference-custom-copy .eyebrow,.elia-reference-contact .eyebrow{font-size:9px;letter-spacing:.2em;color:#8c786a;margin-bottom:24px}
+.elia-reference-about-copy h2,.elia-reference-heading h2,.elia-reference-custom-copy h2,.elia-reference-contact h2{font:400 clamp(48px,5.7vw,76px)/1.02 'Bodoni Moda',serif;letter-spacing:-.04em;color:#302b27;margin:0}
+.elia-reference-about-copy h2 em,.elia-reference-heading h2 em,.elia-reference-custom-copy h2 em,.elia-reference-contact h2 em{color:#927e6e;font-style:italic}
+.elia-reference-about-copy>p:not(.eyebrow),.elia-reference-heading>p,.elia-reference-custom-copy>p:not(.eyebrow),.elia-reference-contact>p:not(.eyebrow){font-size:12px;line-height:2.05;color:#766b62;margin:26px 0}
+.elia-reference-text-link{display:inline-flex;gap:28px;align-items:center;border-bottom:1px solid #a89584;padding-bottom:10px;font-size:9px;letter-spacing:.14em;font-weight:600;color:#51473f}
+.elia-reference-text-link span{color:#927e6e;font-size:16px}
+.elia-reference-about-image{height:clamp(390px,48vw,610px);position:relative}
+.elia-reference-about-image img{object-fit:cover}
+.elia-reference-gallery{padding:clamp(85px,10vw,140px) 8%;background:#f7f5f1}
+.elia-reference-heading{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:48px}
+.elia-reference-heading>div{max-width:650px}
+.elia-reference-heading>p{max-width:280px;margin:0 0 5px}
+.elia-reference-grid{display:grid;grid-template-columns:1.25fr .85fr;grid-template-rows:300px 300px;gap:18px}
+.elia-reference-card{position:relative;isolation:isolate;overflow:hidden;background:#d8cfc6;color:#fff}
+.elia-reference-card img{object-fit:cover;z-index:-2;transition:transform .7s ease}
+.elia-reference-card:hover img{transform:scale(1.04)}
+.elia-reference-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(35,29,25,.55));z-index:-1}
+.elia-reference-card>span{position:absolute;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:center;font:400 30px 'Bodoni Moda',serif}
+.elia-reference-card>span i{font:normal 16px 'DM Sans',sans-serif;color:#e0d2c6}
+.elia-reference-card-large{grid-row:1/3}
+.elia-reference-card-large>span{font-size:42px}
+.elia-reference-all{display:flex;width:max-content;margin:36px auto 0}
+.elia-reference-custom{display:grid;grid-template-columns:1.05fr .95fr;background:#e9e1d9;min-height:600px}
+.elia-reference-custom-image{position:relative;min-height:600px}
+.elia-reference-custom-image img{object-fit:cover}
+.elia-reference-custom-copy{padding:80px clamp(45px,8vw,115px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.elia-reference-custom-copy>p:not(.eyebrow){max-width:400px}
+.elia-reference-button-dark{background:#51473f;padding:16px 20px;border:0;margin-top:4px}
+.elia-reference-contact{text-align:center;padding:clamp(85px,10vw,140px) 8%;background:#f7f5f1}
+.elia-reference-contact h2{font-size:clamp(48px,6vw,78px)}
+.elia-reference-contact>p:not(.eyebrow){max-width:440px;margin:22px auto 28px}
+.elia-reference-footer{background:#302b27;color:#f7f5f1;padding:55px 8% 22px;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:20px}
+.elia-reference-footer .footer-brand{justify-self:start;color:#f7f5f1;font-family:'Bodoni Moda',serif}
+.elia-reference-footer .footer-brand span{color:#c8b9a9}
+.elia-reference-footer>p{text-align:center;font:italic 18px 'Bodoni Moda',serif;color:#d8cfc6}
+.elia-reference-footer>div{justify-self:end;display:flex;gap:20px;font-size:8px;letter-spacing:.12em;color:#d8cfc6}
+.elia-reference-footer>small{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.16);padding-top:17px;color:#c9beb5;font-size:8px;letter-spacing:.12em}
+@media(max-width:800px){
+ .elia-reference-header{grid-template-columns:1fr auto auto;gap:12px;padding-inline:6%!important}
+ .elia-reference-header .nav-links{gap:13px}
+ .elia-reference-header .nav-links a{font-size:7px}
+ .elia-reference-hero{height:680px;min-height:580px}
+ .elia-reference-hero-copy{margin-left:8%;margin-right:8%}
+ .elia-reference-about{padding:85px 8%;gap:40px}
+ .elia-reference-heading{display:block}
+ .elia-reference-heading>p{margin-top:20px}
+ .elia-reference-grid{grid-template-rows:260px 240px}
+ .elia-reference-custom-copy{padding:60px 8%}
+}
+@media(max-width:600px){
+ .elia-reference-header{height:74px!important;min-height:74px;display:flex!important;padding-inline:6%!important}
+ .elia-reference-header .wordmark{font-size:34px}
+ .elia-reference-header .menu-toggle{display:block;margin-left:auto;margin-right:12px}
+ .elia-reference-header .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:#f7f5f1;padding:24px 7%;box-shadow:0 12px 20px #302b2712;align-items:flex-start;flex-direction:column;gap:20px}
+ .elia-reference-header .nav-links.open{display:flex}
+ .elia-reference-header .nav-links a{font-size:10px}
+ .elia-reference-hero{height:640px;min-height:570px}
+ .elia-reference-hero-shade{background:linear-gradient(0deg,rgba(35,30,26,.62),rgba(35,30,26,.12))}
+ .elia-reference-hero-copy{margin:0 7%;padding-top:0}
+ .elia-reference-hero-copy h1{font-size:clamp(56px,14vw,78px)}
+ .elia-reference-hero-copy>p:not(.eyebrow){font-size:12px}
+ .elia-reference-about{grid-template-columns:1fr;padding:72px 7%;gap:32px}
+ .elia-reference-about-image{height:390px}
+ .elia-reference-gallery{padding:75px 6%}
+ .elia-reference-heading h2{font-size:clamp(48px,12vw,65px)}
+ .elia-reference-grid{grid-template-columns:1fr;grid-template-rows:390px 280px 280px;gap:12px}
+ .elia-reference-card-large{grid-row:auto}
+ .elia-reference-card-large>span{font-size:34px}
+ .elia-reference-card>span{font-size:27px;left:18px;bottom:18px}
+ .elia-reference-custom{grid-template-columns:1fr}
+ .elia-reference-custom-image{min-height:370px;height:370px}
+ .elia-reference-custom-copy{padding:68px 7% 75px}
+ .elia-reference-custom-copy h2{font-size:54px}
+ .elia-reference-contact{padding:75px 7%}
+ .elia-reference-contact h2{font-size:52px}
+ .elia-reference-footer{grid-template-columns:1fr;text-align:center;padding:48px 7% 20px}
+ .elia-reference-footer .footer-brand,.elia-reference-footer>div{justify-self:center}
+ .elia-reference-footer>p{margin:0}
+ .elia-reference-footer>small{grid-column:auto}
+}
