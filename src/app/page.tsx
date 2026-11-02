@@ -146,7 +146,7 @@ export default function Home() {
         <div className="footer-main">
           <a className="footer-brand" href="#home">Élia<span>PÂTISSERIE</span></a>
           <p>{t.footer}</p>
-          <a className="footer-contact" href="mailto:hello@elia-patisserie.gr">hello@elia-patisserie.gr ↗</a>
+          <span className="footer-contact">CONTACT DETAILS TO BE CONFIRMED</span>
         </div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Élia Pâtisserie</span><span>AGRINIO, GREECE</span><span>{locale === "en" ? "MADE WITH CARE" : "ΜΕ ΦΡΟΝΤΙΔΑ"}</span></div>
       </footer>
