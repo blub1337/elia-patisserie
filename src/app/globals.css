@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root{--cream:#f5f0e7;--paper:#fbf9f5;--espresso:#302019;--gold:#b99a68;--muted:#8c7c6d;--line:#d9cdbd}
 *{box-sizing:border-box}
@@ -737,4 +737,121 @@ footer{padding-top:85px}
  .elia-footer-contact{justify-self:center}
  .elia-footer-bottom{gap:13px;flex-wrap:wrap;font-size:6px}
  .elia-footer-bottom>div{width:100%;justify-content:center}
+}
+
+
+/* ÉLIA — Taupe Luxury identity */
+:root{
+  --paper:#f7f5f1;
+  --cream:#e9e3dc;
+  --espresso:#302b27;
+  --gold:#a89584;
+  --muted:#81766d;
+  --line:#d8cfc6;
+  --taupe:#b4a394;
+  --stone:#e9e1d9;
+  --mushroom:#76675d;
+  --champagne:#c8b9a9;
+  --shadow-soft:0 24px 70px rgba(48,43,39,.08);
+}
+body{background:var(--paper);color:var(--espresso);font-family:'DM Sans',sans-serif}
+::selection{background:#cfc1b4;color:#302b27}
+.wordmark,.footer-brand,.hero h1,.intro-copy h2,.celebration-copy h2,.section-heading h2,.visit-copy h2,
+.inner-hero h1,.inner-card h2,.steps-grid h2,.inner-prose p,.contact-panel p,.collection-detail-hero h1,
+.collection-information-heading h2,.product-facts h3,.quote-band p,
+.elia-hero-copy h1,.elia-manifesto-copy h2,.elia-section-head h2,.elia-bespoke-copy h2,.elia-visit h2{
+  font-family:'Bodoni Moda','Times New Roman',serif;
+  font-weight:400;
+}
+.announcement{background:#76675d;color:#f7f5f1}
+.announcement span{color:#d8c9bc}
+.site-header,.elia-home .site-header{
+  background:rgba(247,245,241,.94);
+  border-bottom:1px solid rgba(118,103,93,.14);
+  backdrop-filter:blur(18px);
+}
+.wordmark,.footer-brand{color:#302b27}
+.wordmark span,.footer-brand span{color:#76675d}
+.nav-links a,.inner-nav a{color:#655a52}
+.nav-links a:hover,.inner-nav a:hover,.text-link:hover{color:#9b806d}
+.language-switch{border-color:#cfc4ba;color:#51473f;background:transparent}
+.language-switch:hover{background:#e9e3dc;border-color:#a89584}
+.eyebrow,.inner-card span,.steps-grid article>span,.inner-card b,
+.product-facts article>span,.contact-panel strong{color:#927e6e}
+.button-dark{background:#51463e;color:#f7f5f1}
+.button-dark:hover{background:#302b27}
+.button-light{border-color:rgba(247,245,241,.75)}
+.text-link,.elia-underlink{border-color:#a89584}
+.intro-section,.celebration-section,.inner-hero,.collection-detail-hero{background:#e9e3dc}
+.collections-section,.collection-information,.policy-content{background:#f7f5f1}
+.collection-photo,.inner-card img,.collection-detail-hero>img,.inner-prose img{background:#e9e3dc}
+.collection-label{border-color:#d8cfc6}
+.collection-label span,.card-arrow{color:#927e6e}
+.card-arrow{background:#f7f5f1}
+.quote-band{background:#ded5cc}
+.quote-band::before,.quote-band::after{color:rgba(118,103,93,.12)}
+.quote-mark{color:#a89584}
+.product-facts article,.steps-grid article{background:#eee9e3}
+.product-facts article>span{color:#927e6e}
+.page-note,.steps-grid .notice,.policy-content .notice{border-color:#d8cfc6;color:#81766d}
+footer,.elia-footer{background:#302b27;color:#f7f5f1}
+.footer-contact,.footer-legal a,.elia-footer-contact,.elia-footer-bottom a{color:#d2c3b6}
+.footer-brand span{color:#c8b9a9}
+.footer-main p,.elia-footer-top>p{color:#d8cfc6}
+.footer-bottom,.elia-footer-bottom{border-color:rgba(247,245,241,.16);color:#c9beb5}
+.inner-hero h1,.collection-detail-hero h1{color:#302b27}
+.inner-hero>p:last-child,.inner-card p,.steps-grid p,.inner-prose p,.policy-content article p,
+.collection-detail-hero>div>p:not(.eyebrow),.collection-information-heading>p:last-child,
+.product-facts p,.product-disclaimer,.contact-panel p{color:#766b62}
+
+/* New homepage components: refined taupe, softer contrast, no gold ornament. */
+.elia-home{background:#f7f5f1;color:#302b27}
+.elia-home .announcement{background:#76675d;color:#f7f5f1}
+.elia-hero{background:#76675d}
+.elia-hero-shade{background:linear-gradient(90deg,rgba(37,32,29,.62) 0%,rgba(37,32,29,.34) 48%,rgba(37,32,29,.08) 100%)}
+.elia-hero-copy .eyebrow{color:#e2d7cd}
+.elia-hero-copy .eyebrow:before{background:#c8b9a9}
+.elia-hero-copy h1{font-family:'Bodoni Moda',serif;color:#fffaf5;letter-spacing:-.045em;font-weight:400}
+.elia-hero-copy h1 em{color:#e0d2c5;font-style:italic}
+.elia-hero-copy>p:not(.eyebrow){color:rgba(255,250,245,.86)}
+.elia-hero-link{color:#fffaf5;border-color:rgba(255,250,245,.68)}
+.elia-hero-link span{color:#d7c7b9}
+.elia-hero-link:hover{background:#f7f5f1;color:#302b27}
+.elia-hero-meta,.elia-hero-side{color:rgba(255,250,245,.75)}
+.elia-marquee{background:#76675d;color:#f7f5f1}
+.elia-marquee b{color:#d7c7b9}
+.elia-manifesto{background:#e9e3dc}
+.elia-manifesto-image>span{background:#f7f5f1;color:#76675d}
+.elia-manifesto-copy .eyebrow,.elia-section-head .eyebrow,.elia-bespoke-copy .eyebrow,.elia-visit .eyebrow{color:#927e6e}
+.elia-manifesto-copy h2,.elia-section-head h2,.elia-bespoke-copy h2,.elia-visit h2{color:#302b27;font-weight:400}
+.elia-manifesto-copy h2 em,.elia-section-head h2 em,.elia-bespoke-copy h2 em,.elia-visit h2 em{color:#927e6e}
+.elia-body,.elia-section-head>p,.elia-bespoke-copy>p:not(.eyebrow),.elia-visit>div>p:not(.eyebrow){color:#766b62}
+.elia-underlink{color:#51473f;border-color:#a89584}
+.elia-underlink span{color:#927e6e}
+.elia-manifesto-index{color:rgba(118,103,93,.13)}
+.elia-collections{background:#f7f5f1}
+.elia-tile-overlay{background:linear-gradient(0deg,rgba(37,32,29,.58),rgba(37,32,29,0) 65%)}
+.elia-tile-number,.elia-tile-note{color:rgba(255,250,245,.8)}
+.elia-tile-title{color:#fffaf5;font-family:'Bodoni Moda',serif;font-weight:400}
+.elia-tile-title i{color:#e0d2c5}
+.elia-all-link{color:#51473f;border-color:#a89584}
+.elia-bespoke{background:#e3dbd3}
+.elia-bespoke-copy h2{color:#302b27}
+.elia-bespoke-copy h2 em{color:#927e6e}
+.elia-bespoke-copy>p:not(.eyebrow){color:#766b62}
+.elia-dark-link{background:#51463e;color:#f7f5f1}
+.elia-dark-link:hover{background:#302b27}
+.elia-dark-link span{color:#d7c7b9}
+.elia-bespoke-mark{color:rgba(118,103,93,.16)}
+.elia-visit{background:#f7f5f1}
+.elia-visit-word{color:#b4a394}
+.elia-footer{background:#302b27}
+.elia-footer-top .footer-brand{color:#f7f5f1}
+.elia-footer-top .footer-brand span{color:#c8b9a9}
+.elia-footer-contact{border-color:#a89584;color:#e3d7cc}
+.elia-footer-bottom{border-color:rgba(247,245,241,.16);color:#c9beb5}
+.elia-footer-bottom a{color:#d2c3b6}
+@media(max-width:700px){
+  .elia-hero-shade{background:linear-gradient(0deg,rgba(37,32,29,.58),rgba(37,32,29,.12) 100%)}
+  .elia-manifesto,.elia-bespoke{background:#e9e3dc}
 }
