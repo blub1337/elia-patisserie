@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root{--cream:#f5f0e7;--paper:#fbf9f5;--espresso:#302019;--gold:#b99a68;--muted:#8c7c6d;--line:#d9cdbd}
 *{box-sizing:border-box}
@@ -283,7 +283,6 @@ footer{position:relative}
 
 
 /* Modern premium direction — cleaner typography, sharper composition, less ornament. */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
 :root{
   --paper:#fbfaf7;
   --cream:#f1eee7;
