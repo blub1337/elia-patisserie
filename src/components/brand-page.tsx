@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -30,6 +30,9 @@ const content = {
 
 export default function BrandPage({ kind }: { kind: PageKind }) {
   const [locale,setLocale] = useState<"en"|"el">("en");
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
   const t = content[locale], data = t[kind];
   return <main className="inner-page">
     <div className="announcement">✳ {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} ✳</div>
