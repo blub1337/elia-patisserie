@@ -94,3 +94,24 @@ footer{background:var(--espresso);color:var(--cream);padding:65px 8% 20px}
 .footer-legal a{font-size:8px;letter-spacing:.12em;color:#d9c5a8}
 @media(max-width:800px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.gallery-grid{grid-template-columns:1fr}.gallery-card img{height:330px}.policy-content{padding:45px 8% 75px}.footer-legal{width:100%;justify-content:center;flex-wrap:wrap;gap:15px}}
+
+.collection-detail-link{transition:transform .25s,box-shadow .25s}
+.collection-detail-link:hover{transform:translateY(-4px);box-shadow:0 18px 35px #30201912}
+.collection-detail-link b{display:inline-block;margin-top:20px;font-size:8px;letter-spacing:.13em;font-weight:600;color:var(--gold)}
+.collection-detail-hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px;background:var(--cream);align-items:center}
+.collection-detail-hero>img{width:100%;height:520px;object-fit:cover}
+.collection-detail-hero>div{padding:70px 13%}
+.collection-detail-hero h1{font:400 clamp(48px,5.5vw,72px)/.98 'Cormorant Garamond',serif;margin:0;color:var(--espresso)}
+.collection-detail-hero>div>p:not(.eyebrow){font-size:12px;line-height:2;color:#75675b;margin:25px 0 30px}
+.collection-information{max-width:1120px;margin:0 auto;padding:95px 7% 115px;text-align:center}
+.collection-information-heading{max-width:650px;margin:0 auto 55px}
+.collection-information-heading h2{font:400 48px 'Cormorant Garamond',serif;margin:0 0 15px}
+.collection-information-heading>p:last-child{font-size:12px;line-height:2;color:#75675b}
+.product-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;margin-bottom:30px}
+.product-facts article{padding:28px 25px;background:var(--cream);min-height:160px}
+.product-facts article>span{font-size:9px;letter-spacing:.15em;color:var(--gold)}
+.product-facts h3{font:500 25px 'Cormorant Garamond',serif;margin:12px 0 8px}
+.product-facts p{font-size:10px;line-height:1.8;color:#75675b;margin:0}
+.product-disclaimer{font-size:10px;color:var(--muted);line-height:1.8;margin:25px auto 28px;max-width:620px}
+@media(max-width:800px){.collection-detail-hero{grid-template-columns:1fr 1fr}.collection-detail-hero>img{height:460px}.collection-detail-hero>div{padding:45px 9%}.product-facts{gap:12px}.product-facts article{padding:22px 17px}}
+@media(max-width:600px){.collection-detail-hero{grid-template-columns:1fr}.collection-detail-hero>img{height:340px}.collection-detail-hero>div{padding:48px 8% 55px}.collection-detail-hero h1{font-size:54px}.collection-information{padding:65px 7% 80px}.collection-information-heading h2{font-size:42px}.product-facts{grid-template-columns:1fr}.product-facts article{min-height:0;padding:23px}}
