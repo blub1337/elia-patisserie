@@ -5,143 +5,132 @@ import { saveLocale, useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 
-const copy = {
+const content = {
   en: {
-    nav:["Home","Creations","Our story","Custom cakes","Gallery","Contact"],
+    nav:["About","Creations","Custom cakes","Gallery","Contact"],
     eyebrow:"ARTISAN PÂTISSERIE · AGRINIO, GREECE",
-    title:<>A little<br/><em>extraordinary.</em></>,
-    intro:"French pâtisserie spirit. Greek warmth. Beautiful moments, made sweeter.",
-    explore:"DISCOVER ÉLIA",
-    scroll:"SCROLL TO EXPLORE",
-    index:"01 — THE ÉLIA EXPERIENCE",
-    manifestoLabel:"THE ART OF THE EVERYDAY",
-    manifestoTitle:<>Beauty is<br/>in the <em>details.</em></>,
-    manifestoText:"A delicate finish. A golden layer. A moment worth slowing down for. Discover a world shaped by craftsmanship, thoughtful details and the pleasure of sharing something beautiful.",
-    story:"THE ÉLIA STORY",
-    collectionLabel:"A WORLD OF TASTE",
-    collectionTitle:<>Made to be<br/><em>remembered.</em></>,
-    collectionIntro:"Explore the collections and find something for the moment you have in mind.",
-    items:["Pâtisserie","Cakes & tarts","Viennoiserie"],
-    itemNotes:["A delicate little pleasure","For the moments that matter","A slower kind of morning"],
-    viewCollection:"EXPLORE COLLECTION",
-    bespokeLabel:"MADE FOR YOUR MOMENT",
-    bespokeTitle:<>Something special<br/>starts with <em>an idea.</em></>,
-    bespokeText:"A celebration, a gathering or a reason all your own. Tell us what you are imagining and discover the possibilities of a custom cake.",
-    bespokeCta:"ENQUIRE ABOUT A CUSTOM CAKE",
-    visitLabel:"FIND YOUR WAY TO ÉLIA",
-    visitTitle:<>A little sweetness<br/>in <em>Agrinio.</em></>,
-    visitText:"We look forward to welcoming you. Visit our contact page for confirmed details and ways to get in touch.",
-    contact:"CONTACT & VISIT",
-    footer:"Made with care. Shared with joy.",
-    legal:"Privacy · Legal",
-    note:"A LITTLE SWEETNESS, MADE IN AGRINIO"
+    title:<>A little taste<br/>of <em>something special.</em></>,
+    intro:"Thoughtful details, beautiful flavours and handmade creations for life's sweetest moments.",
+    cta:"DISCOVER OUR CREATIONS",
+    aboutLabel:"WELCOME TO ÉLIA",
+    aboutTitle:<>Made with care.<br/><em>Made to be shared.</em></>,
+    aboutText:"At Élia, every detail matters. From delicate pastries to celebration cakes, discover a thoughtful approach to pâtisserie inspired by French tradition and the warmth of Greek hospitality.",
+    aboutLink:"GET TO KNOW ÉLIA",
+    galleryLabel:"A LOOK INSIDE OUR WORLD",
+    galleryTitle:<>A collection of<br/><em>sweet moments.</em></>,
+    galleryText:"Explore a selection of pâtisserie, cakes and handcrafted details.",
+    collection:["Pâtisserie","Celebration cakes","Viennoiserie"],
+    collectionSub:["Small moments of pleasure","Made for your special occasions","A beautiful start to the day"],
+    galleryLink:"VIEW ALL CREATIONS",
+    customLabel:"MADE JUST FOR YOU",
+    customTitle:<>Your idea.<br/>Our <em>craft.</em></>,
+    customText:"A birthday, a wedding or a moment worth celebrating. Tell us what you have in mind and let’s create a cake that feels truly yours.",
+    customCta:"ENQUIRE ABOUT A CUSTOM CAKE",
+    closingTitle:<>Find a little sweetness<br/>in <em>Agrinio.</em></>,
+    closingText:"We would love to welcome you. Get in touch or discover more about Élia.",
+    contact:"CONTACT ÉLIA",
+    footer:"Thoughtfully made in Agrinio, Greece.",
+    legal:"Privacy · Legal"
   },
   el: {
-    nav:["Αρχική","Δημιουργίες","Η ιστορία μας","Τούρτες κατά παραγγελία","Gallery","Επικοινωνία"],
+    nav:["Η Élia","Δημιουργίες","Τούρτες κατά παραγγελία","Gallery","Επικοινωνία"],
     eyebrow:"ΑΡΤΟΠΟΙΙΑ & ΖΑΧΑΡΟΠΛΑΣΤΙΚΗ · ΑΓΡΙΝΙΟ",
-    title:<>Λίγη<br/><em>μαγεία.</em></>,
-    intro:"Γαλλική φινέτσα στη ζαχαροπλαστική. Ελληνική φιλοξενία. Όμορφες στιγμές, γεμάτες γεύση.",
-    explore:"ΑΝΑΚΑΛΥΨΤΕ ΤΗΝ ÉLIA",
-    scroll:"ΚΑΝΤΕ SCROLL ΓΙΑ ΝΑ ΕΞΕΡΕΥΝΗΣΕΤΕ",
-    index:"01 — Η ΕΜΠΕΙΡΙΑ ÉLIA",
-    manifestoLabel:"Η ΤΕΧΝΗ ΤΗΣ ΚΑΘΗΜΕΡΙΝΟΤΗΤΑΣ",
-    manifestoTitle:<>Η ομορφιά<br/>κρύβεται στη <em>λεπτομέρεια.</em></>,
-    manifestoText:"Μια φίνα πινελιά. Μια χρυσαφένια στρώση. Μια στιγμή που αξίζει να απολαύσετε με ηρεμία. Ανακαλύψτε έναν κόσμο γεμάτο δημιουργικότητα, φροντίδα και τη χαρά του μοιράσματος.",
-    story:"Η ΙΣΤΟΡΙΑ ΤΗΣ ÉLIA",
-    collectionLabel:"ΕΝΑΣ ΚΟΣΜΟΣ ΓΕΥΣΕΩΝ",
-    collectionTitle:<>Δημιουργίες που<br/><em>μένουν αξέχαστες.</em></>,
-    collectionIntro:"Ανακαλύψτε τις συλλογές μας και βρείτε κάτι ξεχωριστό για κάθε περίσταση.",
-    items:["Εκλεκτά γλυκά","Τούρτες & τάρτες","Βιενουαζερί"],
-    itemNotes:["Μια μικρή, φίνα απόλαυση","Για τις στιγμές που αξίζουν","Ένα πιο ήρεμο πρωινό"],
-    viewCollection:"ΑΝΑΚΑΛΥΨΤΕ ΤΗ ΣΥΛΛΟΓΗ",
-    bespokeLabel:"ΔΗΜΙΟΥΡΓΗΜΕΝΟ ΓΙΑ ΤΗ ΣΤΙΓΜΗ ΣΑΣ",
-    bespokeTitle:<>Κάτι ξεχωριστό<br/>ξεκινά από μια <em>ιδέα.</em></>,
-    bespokeText:"Μια γιορτή, μια συνάντηση ή μια δική σας ξεχωριστή αφορμή. Μοιραστείτε μαζί μας αυτό που φαντάζεστε και ανακαλύψτε τις δυνατότητες μιας τούρτας κατά παραγγελία.",
-    bespokeCta:"ΖΗΤΗΣΤΕ ΤΗ ΔΙΚΗ ΣΑΣ ΤΟΥΡΤΑ",
-    visitLabel:"ΕΛΑΤΕ ΝΑ ΜΑΣ ΒΡΕΙΤΕ",
-    visitTitle:<>Μια γλυκιά στάση<br/>στο <em>Αγρίνιο.</em></>,
-    visitText:"Θα χαρούμε να σας καλωσορίσουμε. Στη σελίδα επικοινωνίας θα βρείτε τα επιβεβαιωμένα στοιχεία και τους τρόπους επικοινωνίας.",
-    contact:"ΕΠΙΚΟΙΝΩΝΙΑ & ΕΠΙΣΚΕΨΗ",
-    footer:"Δημιουργημένα με φροντίδα. Μοιρασμένα με χαρά.",
-    legal:"Απόρρητο · Νομικά",
-    note:"ΜΙΑ ΓΛΥΚΙΑ ΑΠΟΛΑΥΣΗ, ΦΤΙΑΓΜΕΝΗ ΣΤΟ ΑΓΡΙΝΙΟ"
+    title:<>Μια γεύση<br/>από κάτι <em>ξεχωριστό.</em></>,
+    intro:"Προσεγμένες λεπτομέρειες, υπέροχες γεύσεις και χειροποίητες δημιουργίες για τις πιο γλυκές στιγμές της ζωής.",
+    cta:"ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ",
+    aboutLabel:"ΚΑΛΩΣ ΗΡΘΑΤΕ ΣΤΗΝ ÉLIA",
+    aboutTitle:<>Με φροντίδα.<br/><em>Για να τις μοιραστείτε.</em></>,
+    aboutText:"Στην Élia, κάθε λεπτομέρεια έχει σημασία. Από εκλεκτά γλυκά μέχρι τούρτες για ξεχωριστές περιστάσεις, ανακαλύψτε μια προσέγγιση στη ζαχαροπλαστική εμπνευσμένη από τη γαλλική παράδοση και την ελληνική φιλοξενία.",
+    aboutLink:"ΓΝΩΡΙΣΤΕ ΤΗΝ ÉLIA",
+    galleryLabel:"ΜΙΑ ΜΑΤΙΑ ΣΤΟΝ ΚΟΣΜΟ ΜΑΣ",
+    galleryTitle:<>Μια συλλογή από<br/><em>γλυκές στιγμές.</em></>,
+    galleryText:"Ανακαλύψτε εκλεκτά γλυκά, τούρτες και χειροποίητες λεπτομέρειες.",
+    collection:["Εκλεκτά γλυκά","Τούρτες περιστάσεων","Βιενουαζερί"],
+    collectionSub:["Μικρές στιγμές απόλαυσης","Για τις δικές σας ξεχωριστές στιγμές","Ένα όμορφο ξεκίνημα της ημέρας"],
+    galleryLink:"ΔΕΙΤΕ ΟΛΕΣ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ",
+    customLabel:"ΔΗΜΙΟΥΡΓΗΜΕΝΗ ΓΙΑ ΕΣΑΣ",
+    customTitle:<>Η ιδέα σας.<br/>Η δική μας <em>τέχνη.</em></>,
+    customText:"Μια γιορτή γενεθλίων, ένας γάμος ή μια στιγμή που αξίζει να γιορτάσετε. Πείτε μας τι έχετε φανταστεί και ας δημιουργήσουμε μια τούρτα μοναδική για εσάς.",
+    customCta:"ΖΗΤΗΣΤΕ ΜΙΑ ΤΟΥΡΤΑ ΚΑΤΑ ΠΑΡΑΓΓΕΛΙΑ",
+    closingTitle:<>Μια γλυκιά στάση<br/>στο <em>Αγρίνιο.</em></>,
+    closingText:"Θα χαρούμε να σας καλωσορίσουμε. Επικοινωνήστε μαζί μας ή γνωρίστε καλύτερα την Élia.",
+    contact:"ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΕ ΤΗΝ ÉLIA",
+    footer:"Με φροντίδα, στο Αγρίνιο.",
+    legal:"Απόρρητο · Νομικά"
   }
 };
 
 const photos = {
   hero:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=2400&q=90",
-  detail:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1400&q=88",
-  pastry:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1100&q=88",
+  about:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1500&q=88",
+  pastry:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=88",
   cake:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=88",
-  viennoiserie:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1100&q=88",
-  bespoke:"https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=1600&q=88"
+  viennoiserie:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=88",
+  custom:"https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=1600&q=88"
 };
 
 export default function Home(){
   const locale=useLocale();
   useEffect(()=>{document.documentElement.lang=locale},[locale]);
   const [menuOpen,setMenuOpen]=useState(false);
-  const t=copy[locale];
-  const urls=["/","/creations","/our-story","/custom-cakes","/gallery","/contact"];
-  return <main className="elia-home">
-    <div className="announcement"><span>✳</span>{locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."}<span>✳</span></div>
-    <header className="site-header">
+  const t=content[locale];
+  const links=["/our-story","/creations","/custom-cakes","/gallery","/contact"];
+  return <main className="elia-home elia-reference-home">
+    <header className="site-header elia-reference-header">
       <Link className="wordmark" href="/" aria-label="Élia Pâtisserie home">Élia<span>PÂTISSERIE</span></Link>
       <button className="menu-toggle" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
-      <nav className={menuOpen?"nav-links open":"nav-links"}>{t.nav.map((label,i)=><Link key={label} href={urls[i]} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</nav>
+      <nav className={menuOpen?"nav-links open":"nav-links"}>{t.nav.map((label,i)=><Link key={label} href={links[i]} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</nav>
       <button className="language-switch" onClick={()=>saveLocale(locale==="en"?"el":"en")} aria-label="Change language">{locale==="en"?"ΕΛ":"EN"} <span>↗</span></button>
     </header>
 
-    <section className="elia-hero">
-      <Image src={photos.hero} alt="An elegant pâtisserie dessert" fill priority unoptimized sizes="100vw"/>
-      <div className="elia-hero-shade"/>
-      <div className="elia-hero-copy">
-        <p className="eyebrow light">{t.eyebrow}</p>
+    <section className="elia-reference-hero">
+      <Image src={photos.hero} alt="Élia pâtisserie selection" fill priority unoptimized sizes="100vw"/>
+      <div className="elia-reference-hero-shade"/>
+      <div className="elia-reference-hero-copy">
+        <p className="eyebrow">{t.eyebrow}</p>
         <h1>{t.title}</h1>
         <p>{t.intro}</p>
-        <Link className="elia-hero-link" href="/creations">{t.explore}<span>↗</span></Link>
+        <Link href="/creations" className="elia-reference-button">{t.cta}<span>↗</span></Link>
       </div>
-      <div className="elia-hero-meta"><span>{t.index}</span><a href="#elia-intro">{t.scroll} ↓</a></div>
-      <span className="elia-hero-side">ÉLIA PÂTISSERIE — AGRINIO</span>
+      <span className="elia-reference-hero-caption">ÉLIA PÂTISSERIE · AGRINIO, GREECE</span>
     </section>
 
-    <div className="elia-marquee" aria-label={t.note}><div>{Array.from({length:4},(_,i)=><span key={i}>{t.note}<b>✳</b></span>)}</div></div>
-
-    <section className="elia-manifesto" id="elia-intro">
-      <div className="elia-manifesto-image"><Image src={photos.detail} alt="Freshly prepared artisan pastry" width={1400} height={1500} unoptimized sizes="(max-width: 700px) 100vw, 48vw"/><span>01 / ÉLIA PÂTISSERIE</span></div>
-      <div className="elia-manifesto-copy">
-        <p className="eyebrow">{t.manifestoLabel}</p>
-        <h2>{t.manifestoTitle}</h2>
-        <p className="elia-body">{t.manifestoText}</p>
-        <Link className="elia-underlink" href="/our-story">{t.story}<span>↗</span></Link>
-        <span className="elia-manifesto-index">E.</span>
+    <section className="elia-reference-about">
+      <div className="elia-reference-about-copy">
+        <p className="eyebrow">{t.aboutLabel}</p>
+        <h2>{t.aboutTitle}</h2>
+        <p>{t.aboutText}</p>
+        <Link href="/our-story" className="elia-reference-text-link">{t.aboutLink}<span>↗</span></Link>
       </div>
+      <div className="elia-reference-about-image"><Image src={photos.about} alt="Freshly prepared pâtisserie" fill unoptimized sizes="(max-width:760px) 100vw, 50vw"/></div>
     </section>
 
-    <section className="elia-collections">
-      <div className="elia-section-head"><div><p className="eyebrow">{t.collectionLabel}</p><h2>{t.collectionTitle}</h2></div><p>{t.collectionIntro}</p></div>
-      <div className="elia-mosaic">
-        <Link href="/creations/signature-patisserie" className="elia-tile elia-tile-one"><Image src={photos.pastry} alt={t.items[0]} fill unoptimized sizes="(max-width:700px) 100vw, 48vw"/><span className="elia-tile-overlay"/><span className="elia-tile-number">01</span><span className="elia-tile-title">{t.items[0]}<i>↗</i></span><span className="elia-tile-note">{t.itemNotes[0]}</span></Link>
-        <Link href="/creations/cakes-tarts" className="elia-tile elia-tile-two"><Image src={photos.cake} alt={t.items[1]} fill unoptimized sizes="(max-width:700px) 100vw, 38vw"/><span className="elia-tile-overlay"/><span className="elia-tile-number">02</span><span className="elia-tile-title">{t.items[1]}<i>↗</i></span><span className="elia-tile-note">{t.itemNotes[1]}</span></Link>
-        <Link href="/creations/viennoiserie" className="elia-tile elia-tile-three"><Image src={photos.viennoiserie} alt={t.items[2]} fill unoptimized sizes="(max-width:700px) 100vw, 38vw"/><span className="elia-tile-overlay"/><span className="elia-tile-number">03</span><span className="elia-tile-title">{t.items[2]}<i>↗</i></span><span className="elia-tile-note">{t.itemNotes[2]}</span></Link>
+    <section className="elia-reference-gallery">
+      <div className="elia-reference-heading"><div><p className="eyebrow">{t.galleryLabel}</p><h2>{t.galleryTitle}</h2></div><p>{t.galleryText}</p></div>
+      <div className="elia-reference-grid">
+        <Link href="/creations/signature-patisserie" className="elia-reference-card elia-reference-card-large"><Image src={photos.pastry} alt={t.collection[0]} fill unoptimized sizes="(max-width:760px) 100vw, 50vw"/><span>{t.collection[0]}<i>↗</i></span></Link>
+        <Link href="/creations/cakes-tarts" className="elia-reference-card"><Image src={photos.cake} alt={t.collection[1]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[1]}<i>↗</i></span></Link>
+        <Link href="/creations/viennoiserie" className="elia-reference-card"><Image src={photos.viennoiserie} alt={t.collection[2]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[2]}<i>↗</i></span></Link>
       </div>
-      <Link className="elia-all-link" href="/creations">{locale==="en"?"VIEW ALL CREATIONS":"ΟΛΕΣ ΟΙ ΔΗΜΙΟΥΡΓΙΕΣ"}<span>↗</span></Link>
+      <Link href="/gallery" className="elia-reference-text-link elia-reference-all">{t.galleryLink}<span>↗</span></Link>
     </section>
 
-    <section className="elia-bespoke">
-      <div className="elia-bespoke-image"><Image src={photos.bespoke} alt="A refined cake detail" fill unoptimized sizes="(max-width:700px) 100vw, 55vw"/></div>
-      <div className="elia-bespoke-copy"><p className="eyebrow">{t.bespokeLabel}</p><h2>{t.bespokeTitle}</h2><p>{t.bespokeText}</p><Link className="elia-dark-link" href="/custom-cakes">{t.bespokeCta}<span>↗</span></Link></div>
-      <span className="elia-bespoke-mark">É.</span>
+    <section className="elia-reference-custom">
+      <div className="elia-reference-custom-image"><Image src={photos.custom} alt="A custom celebration cake" fill unoptimized sizes="(max-width:760px) 100vw, 55vw"/></div>
+      <div className="elia-reference-custom-copy"><p className="eyebrow">{t.customLabel}</p><h2>{t.customTitle}</h2><p>{t.customText}</p><Link href="/custom-cakes" className="elia-reference-button elia-reference-button-dark">{t.customCta}<span>↗</span></Link></div>
     </section>
 
-    <section className="elia-visit">
-      <div><p className="eyebrow">{t.visitLabel}</p><h2>{t.visitTitle}</h2><p>{t.visitText}</p><Link className="elia-underlink" href="/contact">{t.contact}<span>↗</span></Link></div>
-      <span className="elia-visit-word">AGRINIO<br/>GREECE</span>
+    <section className="elia-reference-contact">
+      <p className="eyebrow">ÉLIA PÂTISSERIE · AGRINIO</p>
+      <h2>{t.closingTitle}</h2><p>{t.closingText}</p>
+      <Link href="/contact" className="elia-reference-text-link">{t.contact}<span>↗</span></Link>
     </section>
 
-    <footer className="elia-footer">
-      <div className="elia-footer-top"><Link className="footer-brand" href="/">Élia<span>PÂTISSERIE</span></Link><p>{t.footer}</p><Link href="/contact" className="elia-footer-contact">{t.contact} ↗</Link></div>
-      <div className="elia-footer-bottom"><span>© {new Date().getFullYear()} Élia Pâtisserie</span><span>AGRINIO, GREECE</span><div><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link></div></div>
+    <footer className="elia-reference-footer">
+      <Link className="footer-brand" href="/">Élia<span>PÂTISSERIE</span></Link>
+      <p>{t.footer}</p>
+      <div><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link></div>
+      <small>© {new Date().getFullYear()} Élia Pâtisserie</small>
     </footer>
   </main>;
 }
