@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type Locale = "en" | "el";
 
@@ -91,7 +92,7 @@ export default function Home() {
       </section>
 
       <section className="intro-section" id="story">
-        <div className="intro-image-wrap"><img src={photos.detail} alt="Delicate artisan pastry finished by hand" /><span className="image-caption">{t.note}</span></div>
+        <div className="intro-image-wrap"><Image src={photos.detail} alt="Delicate artisan pastry finished by hand" width={1200} height={1000} sizes="(max-width: 600px) 84vw, 38vw" unoptimized /><span className="image-caption">{t.note}</span></div>
         <div className="intro-copy">
           <p className="eyebrow">{t.story}</p>
           <h2>{t.featured}<br /><em>{t.featuredItalic}</em></h2>
@@ -109,7 +110,7 @@ export default function Home() {
         <div className="collection-grid">
           {[photos.pastry, photos.cake, photos.viennoiserie].map((photo, i) => (
             <Link className="collection-card" href="/creations" key={photo}>
-              <div className="collection-photo"><img src={photo} alt={t.items[i]} /><span className="card-arrow">↗</span></div>
+              <div className="collection-photo"><Image src={photo} alt={t.items[i]} width={1000} height={1200} sizes="(max-width: 600px) 86vw, (max-width: 800px) 30vw, 26vw" unoptimized /><span className="card-arrow">↗</span></div>
               <div className="collection-label"><span>0{i + 1}</span><h3>{t.items[i]}</h3></div>
             </Link>
           ))}
