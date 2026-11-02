@@ -33,7 +33,7 @@ const content = {
     legal:"Privacy · Legal"
   },
   el: {
-    nav:["Σχετικά με εμάς","Δημιουργίες","Τούρτες κατά παραγγελία","Φωτογραφίες","Επικοινωνία"],
+    nav:["Αρχική","Σχετικά με εμάς","Δημιουργίες","Τούρτες κατά παραγγελία","Φωτογραφίες","Επικοινωνία"],
     eyebrow:"ΖΑΧΑΡΟΠΛΑΣΤΙΚΗ & ΑΡΤΟΠΟΙΙΑ · ΑΓΡΙΝΙΟ",
     title:<>Μια γεύση<br/>από κάτι <em>ξεχωριστό.</em></>,
     intro:"Προσεγμένες λεπτομέρειες, υπέροχες γεύσεις και χειροποίητες δημιουργίες για τις πιο γλυκές στιγμές της ζωής.",
@@ -74,7 +74,7 @@ export default function Home(){
   useEffect(()=>{document.documentElement.lang=locale},[locale]);
   const [menuOpen,setMenuOpen]=useState(false);
   const t=content[locale];
-  const links=["/our-story","/creations","/custom-cakes","/gallery","/contact"];
+  const links=["/","/our-story","/creations","/custom-cakes","/gallery","/contact"];
   return <main className="elia-home elia-reference-home">
     <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Kalyvia.":"Μια γλυκιά απόλαυση, φτιαγμένη στα Καλύβια."} <span>✳</span></div>
     <header className="site-header elia-reference-header">
