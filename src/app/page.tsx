@@ -66,6 +66,10 @@ const photos = {
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("el");
   useEffect(() => {
+    const savedLocale = window.localStorage.getItem("elia-locale");
+    if (savedLocale === "en" || savedLocale === "el") setLocale(savedLocale);
+  }, []);
+  useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,7 +84,7 @@ export default function Home() {
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           {t.nav.map((label, i) => <a key={label} href={["/", "/creations", "/our-story", "/contact"][i]} onClick={() => setMenuOpen(false)}>{label}</a>)}
         </nav>
-        <button className="language-switch" onClick={() => setLocale(locale === "en" ? "el" : "en")} aria-label="Change language">{locale === "en" ? "ΕΛ" : "EN"} <span>↗</span></button>
+        <button className="language-switch" onClick={() => { const nextLocale = locale === "en" ? "el" : "en"; window.localStorage.setItem("elia-locale", nextLocale); setLocale(nextLocale); }} aria-label="Change language">{locale === "en" ? "ΕΛ" : "EN"} <span>↗</span></button>
       </header>
 
       <section className="hero" id="home" style={{ backgroundImage: `linear-gradient(90deg, rgba(31,22,17,.66), rgba(31,22,17,.12)), url("${photos.hero}")` }}>
