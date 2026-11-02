@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -65,6 +65,9 @@ const photos = {
 
 export default function Home() {
   const [locale, setLocale] = useState<Locale>("en");
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
   const [menuOpen, setMenuOpen] = useState(false);
   const t = copy[locale];
 
