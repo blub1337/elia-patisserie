@@ -5,7 +5,6 @@ import { saveLocale, useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 
-type Locale = "en" | "el";
 
 const copy = {
   en: {
