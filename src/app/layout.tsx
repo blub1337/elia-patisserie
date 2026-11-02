@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   },
   description:
     "Discover the art of fine baking and delicate pâtisserie. Artisan creations, crafted with passion in Agrinio, Greece.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: ["/favicon.svg"],
+    apple: [{ url: "/favicon.svg", type: "image/svg+xml" }]
+  },
   openGraph: {
     title: "Élia Pâtisserie",
     description: "A taste of art. Crafted with passion.",
