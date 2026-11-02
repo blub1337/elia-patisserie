@@ -35,7 +35,7 @@ type Slug = keyof typeof collections;
 const slugs = Object.keys(collections) as Slug[];
 
 export default function CollectionPage({ slug }: { slug: string }) {
-  const [locale,setLocale] = useState<"en"|"el">("en");
+  const [locale,setLocale] = useState<"en"|"el">("el");
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
