@@ -974,3 +974,7 @@ footer,.elia-footer{background:#302b27;color:#f7f5f1}
 @media(prefers-reduced-motion:reduce){
   .elia-reference-hero-image{transform:none!important;will-change:auto}
 }
+
+
+/* Revert custom WebP hero parallax */
+.elia-reference-hero-image{transform:none;will-change:auto}
