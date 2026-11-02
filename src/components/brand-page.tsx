@@ -36,7 +36,7 @@ export default function BrandPage({ kind }: { kind: PageKind }) {
   }, [locale]);
   const t = content[locale], data = t[kind];
   return <main className="inner-page">
-    <div className="announcement">✳ {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} ✳</div>
+    <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} <span>✳</span></div>
     <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav">{t.nav.map(([label,url])=><Link key={url} href={url}>{label}</Link>)}</nav><button className="language-switch" onClick={()=>saveLocale(locale==="en"?"el":"en")}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
     <section className="inner-hero"><p className="eyebrow">{data.eyebrow}</p><h1>{data.title}</h1><p>{data.intro}</p></section>
     {kind==="creations" && "cards" in data && <section className="inner-cards">{data.cards.map((card, i)=>{ const [name,desc,photo] = card; const slugs=["signature-patisserie","cakes-tarts","viennoiserie","artisan-bread","chocolate-pralines","seasonal-creations"]; return <Link className="inner-card collection-detail-link" href={`/creations/${slugs[i]}`} key={name}><Image src={photo} alt={name} width={1000} height={750} sizes="(max-width: 600px) 86vw, (max-width: 800px) 42vw, 28vw" unoptimized /><div><span>0{i+1} · {locale==="en"?"EXPLORE":"ΑΝΑΚΑΛΥΨΤΕ"}</span><h2>{name}</h2><p>{desc}</p><b>{locale==="en"?"DISCOVER THE COLLECTION":"ΑΝΑΚΑΛΥΨΤΕ ΤΗ ΣΥΛΛΟΓΗ"} ↗</b></div></Link>; })}</section>}
