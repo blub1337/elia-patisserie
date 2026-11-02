@@ -8,14 +8,14 @@ import Image from "next/image";
 const content = {
   en: {
     nav:["About","Creations","Custom cakes","Gallery","Contact"],
-    eyebrow:"ARTISAN PÂTISSERIE · AGRINIO, GREECE",
+    eyebrow:"ARTISAN PÂTISSERIE · KALYVIA, GREECE",
     title:<>A little taste<br/>of <em>something special.</em></>,
     intro:"Thoughtful details, beautiful flavours and handmade creations for life's sweetest moments.",
     cta:"DISCOVER OUR CREATIONS",
-    aboutLabel:"WELCOME TO ÉLIA",
+    aboutLabel:"WELCOME TO SOFIA & STELIOS",
     aboutTitle:<>Made with care.<br/><em>Made to be shared.</em></>,
-    aboutText:"At Élia, every detail matters. From delicate pastries to celebration cakes, discover a thoughtful approach to pâtisserie inspired by French tradition and the warmth of Greek hospitality.",
-    aboutLink:"GET TO KNOW ÉLIA",
+    aboutText:"At Sofia & Stelios, every detail matters. From delicate pastries to celebration cakes, discover a thoughtful approach to pâtisserie inspired by French tradition and the warmth of Greek hospitality.",
+    aboutLink:"GET TO KNOW SOFIA & STELIOS",
     galleryLabel:"A LOOK INSIDE OUR WORLD",
     galleryTitle:<>A collection of<br/><em>sweet moments.</em></>,
     galleryText:"Explore a selection of pâtisserie, cakes and handcrafted details.",
@@ -26,10 +26,10 @@ const content = {
     customTitle:<>Your idea.<br/>Our <em>craft.</em></>,
     customText:"A birthday, a wedding or a moment worth celebrating. Tell us what you have in mind and let’s create a cake that feels truly yours.",
     customCta:"ENQUIRE ABOUT A CUSTOM CAKE",
-    closingTitle:<>Find a little sweetness<br/>in <em>Agrinio.</em></>,
-    closingText:"We would love to welcome you. Get in touch or discover more about Élia.",
-    contact:"CONTACT ÉLIA",
-    footer:"Thoughtfully made in Agrinio, Greece.",
+    closingTitle:<>Find a little sweetness<br/>in <em>Kalyvia.</em></>,
+    closingText:"We would love to welcome you. Get in touch or discover more about Sofia & Stelios.",
+    contact:"CONTACT SOFIA & STELIOS",
+    footer:"Thoughtfully made in Kalyvia, Greece.",
     legal:"Privacy · Legal"
   },
   el: {
@@ -38,9 +38,9 @@ const content = {
     title:<>Μια γεύση<br/>από κάτι <em>ξεχωριστό.</em></>,
     intro:"Προσεγμένες λεπτομέρειες, υπέροχες γεύσεις και χειροποίητες δημιουργίες για τις πιο γλυκές στιγμές της ζωής.",
     cta:"ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ",
-    aboutLabel:"ΚΑΛΩΣ ΗΡΘΑΤΕ ΣΤΗΝ ÉLIA",
+    aboutLabel:"ΚΑΛΩΣ ΗΡΘΑΤΕ ΣΤΟ SOFIA & STELIOS",
     aboutTitle:<>Φτιαγμένες με φροντίδα.<br/><em>Για να τις μοιραστείτε.</em></>,
-    aboutText:"Στην Élia, κάθε λεπτομέρεια μετράει. Από εκλεκτά γλυκά μέχρι τούρτες για ξεχωριστές περιστάσεις, ανακαλύψτε τη δική μας προσέγγιση στη ζαχαροπλαστική, με έμπνευση από τη γαλλική παράδοση και τη ζεστασιά της ελληνικής φιλοξενίας.",
+    aboutText:"Στην Sofia & Stelios, κάθε λεπτομέρεια μετράει. Από εκλεκτά γλυκά μέχρι τούρτες για ξεχωριστές περιστάσεις, ανακαλύψτε τη δική μας προσέγγιση στη ζαχαροπλαστική, με έμπνευση από τη γαλλική παράδοση και τη ζεστασιά της ελληνικής φιλοξενίας.",
     aboutLink:"ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ",
     galleryLabel:"ΜΙΑ ΜΑΤΙΑ ΣΤΟΝ ΚΟΣΜΟ ΜΑΣ",
     galleryTitle:<>Μια συλλογή από<br/><em>γλυκές στιγμές.</em></>,
@@ -52,10 +52,10 @@ const content = {
     customTitle:<>Η ιδέα σας.<br/>Η δική μας <em>τέχνη.</em></>,
     customText:"Είτε πρόκειται για γενέθλια, γάμο ή κάποια άλλη ξεχωριστή περίσταση, μια τούρτα κατά παραγγελία κάνει τη στιγμή ακόμη πιο ιδιαίτερη. Πείτε μας την ιδέα σας και ας δημιουργήσουμε μαζί κάτι μοναδικό.",
     customCta:"ΖΗΤΗΣΤΕ ΜΙΑ ΤΟΥΡΤΑ ΚΑΤΑ ΠΑΡΑΓΓΕΛΙΑ",
-    closingTitle:<>Μια γλυκιά στάση<br/>στο <em>Αγρίνιο.</em></>,
-    closingText:"Θα χαρούμε να σας υποδεχτούμε. Επικοινωνήστε μαζί μας ή γνωρίστε καλύτερα την Élia.",
-    contact:"ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΕ ΤΗΝ ÉLIA",
-    footer:"Με φροντίδα, στο Αγρίνιο.",
+    closingTitle:<>Μια γλυκιά στάση<br/>στο <em>Καλύβια.</em></>,
+    closingText:"Θα χαρούμε να σας υποδεχτούμε. Επικοινωνήστε μαζί μας ή γνωρίστε καλύτερα την Sofia & Stelios.",
+    contact:"ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΕ ΤΗΝ SOFIA & STELIOS",
+    footer:"Με φροντίδα, στο Καλύβια.",
     legal:"Απόρρητο · Νομικά"
   }
 };
@@ -76,16 +76,16 @@ export default function Home(){
   const t=content[locale];
   const links=["/our-story","/creations","/custom-cakes","/gallery","/contact"];
   return <main className="elia-home elia-reference-home">
-    <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} <span>✳</span></div>
+    <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Kalyvia.":"Μια γλυκιά απόλαυση, φτιαγμένη στα Καλύβια."} <span>✳</span></div>
     <header className="site-header elia-reference-header">
-      <Link className="wordmark" href="/" aria-label="Élia Pâtisserie home">Élia<span>PÂTISSERIE</span></Link>
+      <Link className="wordmark" href="/" aria-label="Sofia & Stelios home">Sofia & Stelios<span>PÂTISSERIE</span></Link>
       <button className="menu-toggle" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
       <nav className={menuOpen?"nav-links open":"nav-links"}>{t.nav.map((label,i)=><Link key={label} href={links[i]} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</nav>
       <button className="language-switch" onClick={()=>saveLocale(locale==="en"?"el":"en")} aria-label="Change language">{locale==="en"?"ΕΛ":"EN"} <span>↗</span></button>
     </header>
 
     <section className="elia-reference-hero">
-      <Image src={photos.hero} alt="Élia pâtisserie selection" fill priority unoptimized sizes="100vw"/>
+      <Image src={photos.hero} alt="Sofia & Stelios pâtisserie selection" fill priority unoptimized sizes="100vw"/>
       <div className="elia-reference-hero-shade"/>
       <div className="elia-reference-hero-copy">
         <p className="eyebrow">{t.eyebrow}</p>
@@ -93,7 +93,7 @@ export default function Home(){
         <p>{t.intro}</p>
         <Link href="/creations" className="elia-reference-button">{t.cta}<span>↗</span></Link>
       </div>
-      <span className="elia-reference-hero-caption">ÉLIA PÂTISSERIE · AGRINIO, GREECE</span>
+      <span className="elia-reference-hero-caption">SOFIA & STELIOS PÂTISSERIE · KALYVIA, GREECE</span>
     </section>
 
     <section className="elia-reference-about">
@@ -122,16 +122,16 @@ export default function Home(){
     </section>
 
     <section className="elia-reference-contact">
-      <p className="eyebrow">ÉLIA PÂTISSERIE · AGRINIO</p>
+      <p className="eyebrow">SOFIA & STELIOS PÂTISSERIE · KALYVIA</p>
       <h2>{t.closingTitle}</h2><p>{t.closingText}</p>
       <Link href="/contact" className="elia-reference-text-link">{t.contact}<span>↗</span></Link>
     </section>
 
     <footer className="elia-reference-footer">
-      <Link className="footer-brand" href="/">Élia<span>PÂTISSERIE</span></Link>
+      <Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link>
       <p>{t.footer}</p>
       <div><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link></div>
-      <small>© {new Date().getFullYear()} Élia Pâtisserie</small>
+      <small>© {new Date().getFullYear()} Sofia & Stelios Pâtisserie</small>
     </footer>
   </main>;
 }
