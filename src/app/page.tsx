@@ -72,6 +72,30 @@ const photos = {
 export default function Home(){
   const locale=useLocale();
   useEffect(()=>{document.documentElement.lang=locale},[locale]);
+  useEffect(()=>{
+    const section=document.querySelector<HTMLElement>(".elia-reference-hero");
+    const image=section?.querySelector<HTMLImageElement>(".elia-reference-hero-image");
+    if(!section||!image||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    let frame=0;
+    const update=()=>{
+      cancelAnimationFrame(frame);
+      frame=requestAnimationFrame(()=>{
+        const bounds=section.getBoundingClientRect();
+        if(bounds.bottom>0&&bounds.top<window.innerHeight){
+          const offset=Math.max(-24,Math.min(130,(window.innerHeight-bounds.top)*0.13));
+          image.style.transform=`translate3d(0,${offset}px,0) scale(1.12)`;
+        }
+      });
+    };
+    update();
+    window.addEventListener("scroll",update,{passive:true});
+    window.addEventListener("resize",update);
+    return ()=>{
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll",update);
+      window.removeEventListener("resize",update);
+    };
+  },[]);
   const [menuOpen,setMenuOpen]=useState(false);
   const t=content[locale];
   const links=["/our-story","/creations","/custom-cakes","/gallery","/contact"];
@@ -84,7 +108,7 @@ export default function Home(){
     </header>
 
     <section className="elia-reference-hero">
-      <Image src={photos.hero} alt="Élia pâtisserie selection" fill priority unoptimized sizes="100vw"/>
+      <Image src="/images/elia-hero.webp" alt="Élia pâtisserie selection" fill priority unoptimized sizes="100vw" className="elia-reference-hero-image"/>
       <div className="elia-reference-hero-shade"/>
       <div className="elia-reference-hero-copy">
         <p className="eyebrow">{t.eyebrow}</p>
