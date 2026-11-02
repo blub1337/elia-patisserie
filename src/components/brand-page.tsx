@@ -23,7 +23,7 @@ const content = {
 
 export default function BrandPage({ kind }: { kind: PageKind }) {
   const [locale,setLocale] = useState<"en"|"el">("en");
-  const t = content[locale], data = t[kind];
+  const t = content[locale], data = t[kind] as any;
   return <main className="inner-page">
     <div className="announcement">✳ {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} ✳</div>
     <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav">{t.nav.map(([label,url])=><Link key={url} href={url}>{label}</Link>)}</nav><button className="language-switch" onClick={()=>setLocale(locale==="en"?"el":"en")}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
