@@ -19,7 +19,7 @@ const content = {
     custom:{eyebrow:"ΓΙΑ ΤΙΣ ΞΕΧΩΡΙΣΤΕΣ ΣΤΙΓΜΕΣ ΣΑΣ",title:"Μια τούρτα μοναδική, όπως η περίσταση.",intro:"Από γενέθλια και επετείους μέχρι μικρές συγκεντρώσεις, μια τούρτα κατά παραγγελία κάνει τη στιγμή πραγματικά δική σας.",steps:[["01","Μοιραστείτε την ιδέα σας","Πείτε μας για την περίσταση, τις γεύσεις, το μέγεθος και την ημερομηνία."],["02","Σχεδιάζουμε τις λεπτομέρειες","Συζητάμε το σχέδιο, τη διαθεσιμότητα και τις πρακτικές ανάγκες."],["03","Δημιουργία για τη μέρα σας","Μόλις συμφωνηθούν όλα, η δημιουργία σας ετοιμάζεται για παραλαβή."]],note:"Η φόρμα παραγγελιών θα ενεργοποιηθεί μόλις προστεθούν τα επιβεβαιωμένα στοιχεία επικοινωνίας και η διαδικασία παραγγελίας."},
     contact:{eyebrow:"ΕΛΑΤΕ ΝΑ ΓΝΩΡΙΣΤΟΥΜΕ",title:"Θα χαρούμε να σας καλωσορίσουμε.",intro:"Élia Pâtisserie · Αγρίνιο, Ελλάδα",body:"Η επιβεβαιωμένη διεύθυνση, το τηλέφωνο, το ωράριο και οι τρόποι επικοινωνίας θα δημοσιευτούν εδώ μόλις επιβεβαιωθούν από την επιχείρηση.",note:"ΤΑ ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ ΘΑ ΕΠΙΒΕΒΑΙΩΘΟΥΝ"}
   }
-};
+} as const;
 
 export default function BrandPage({ kind }: { kind: PageKind }) {
   const [locale,setLocale] = useState<"en"|"el">("en");
@@ -28,9 +28,9 @@ export default function BrandPage({ kind }: { kind: PageKind }) {
     <div className="announcement">✳ {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} ✳</div>
     <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav">{t.nav.map(([label,url])=><Link key={url} href={url}>{label}</Link>)}</nav><button className="language-switch" onClick={()=>setLocale(locale==="en"?"el":"en")}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
     <section className="inner-hero"><p className="eyebrow">{data.eyebrow}</p><h1>{data.title}</h1><p>{data.intro}</p></section>
-    {kind==="creations" && "cards" in data && <section className="inner-cards">{data.cards.map((card: [string, string, string], i: number)=>{ const [name,desc,photo] = card; return <article className="inner-card" key={name}><img src={photo} alt={name}/><div><span>0{i+1}</span><h2>{name}</h2><p>{desc}</p></div></article>; })}</section>}
+    {kind==="creations" && "cards" in data && <section className="inner-cards">{data.cards.map((card, i)=>{ const [name,desc,photo] = card; return <article className="inner-card" key={name}><img src={photo} alt={name}/><div><span>0{i+1}</span><h2>{name}</h2><p>{desc}</p></div></article>; })}</section>}
     {kind==="story" && "body" in data && <section className="inner-prose"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=85" alt="A calm artisan kitchen workspace"/><div><p>{data.body}</p><Link className="button button-dark" href="/creations">{locale==="en"?"DISCOVER OUR CREATIONS":"ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΔΗΜΙΟΥΡΓΙΕΣ ΜΑΣ"} ↗</Link></div></section>}
-    {kind==="custom" && "steps" in data && <section className="steps-grid">{data.steps.map((step: [string, string, string])=>{ const [n,title,desc] = step; return <article key={n}><span>{n}</span><h2>{title}</h2><p>{desc}</p></article>; })}<p className="notice">{data.note}</p></section>}
+    {kind==="custom" && "steps" in data && <section className="steps-grid">{data.steps.map((step)=>{ const [n,title,desc] = step; return <article key={n}><span>{n}</span><h2>{title}</h2><p>{desc}</p></article>; })}{"note" in data && <p className="notice">{data.note}</p>}</section>}
     {kind==="contact" && "body" in data && <section className="contact-panel"><div className="contact-monogram">É</div><p>{data.body}</p><strong>{data.note}</strong></section>}
     <footer><div className="footer-main"><Link className="footer-brand" href="/">Élia<span>PÂTISSERIE</span></Link><p>{locale==="en"?"Made with care. Shared with joy.":"Με φροντίδα δημιουργημένα. Με χαρά μοιρασμένα."}</p><span className="footer-contact">AGRINIO, GREECE</span></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Élia Pâtisserie</span><span>AGRINIO, GREECE</span><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></div></footer>
   </main>;
