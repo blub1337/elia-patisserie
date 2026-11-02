@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   },
   description:
     "Discover the art of fine baking and delicate pâtisserie. Artisan creations, crafted with passion in Agrinio, Greece.",
-  metadataBase: new URL("https://elia-patisserie.gr"),
   openGraph: {
     title: "Élia Pâtisserie",
     description: "A taste of art. Crafted with passion.",
