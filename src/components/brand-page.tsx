@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { saveLocale, useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -29,18 +30,14 @@ const content = {
 } as const;
 
 export default function BrandPage({ kind }: { kind: PageKind }) {
-  const [locale,setLocale] = useState<"en"|"el">("el");
-  useEffect(() => {
-    const savedLocale = window.localStorage.getItem("elia-locale");
-    if (savedLocale === "en" || savedLocale === "el") setLocale(savedLocale);
-  }, []);
+  const locale = useLocale();
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
   const t = content[locale], data = t[kind];
   return <main className="inner-page">
     <div className="announcement">✳ {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} ✳</div>
-    <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav">{t.nav.map(([label,url])=><Link key={url} href={url}>{label}</Link>)}</nav><button className="language-switch" onClick={()=>{ const nextLocale = locale==="en"?"el":"en"; window.localStorage.setItem("elia-locale", nextLocale); setLocale(nextLocale); }}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
+    <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav">{t.nav.map(([label,url])=><Link key={url} href={url}>{label}</Link>)}</nav><button className="language-switch" onClick={()=>saveLocale(locale==="en"?"el":"en")}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
     <section className="inner-hero"><p className="eyebrow">{data.eyebrow}</p><h1>{data.title}</h1><p>{data.intro}</p></section>
     {kind==="creations" && "cards" in data && <section className="inner-cards">{data.cards.map((card, i)=>{ const [name,desc,photo] = card; const slugs=["signature-patisserie","cakes-tarts","viennoiserie","artisan-bread","chocolate-pralines","seasonal-creations"]; return <Link className="inner-card collection-detail-link" href={`/creations/${slugs[i]}`} key={name}><Image src={photo} alt={name} width={1000} height={750} sizes="(max-width: 600px) 86vw, (max-width: 800px) 42vw, 28vw" unoptimized /><div><span>0{i+1} · {locale==="en"?"EXPLORE":"ΑΝΑΚΑΛΥΨΤΕ"}</span><h2>{name}</h2><p>{desc}</p><b>{locale==="en"?"DISCOVER THE COLLECTION":"ΑΝΑΚΑΛΥΨΤΕ ΤΗ ΣΥΛΛΟΓΗ"} ↗</b></div></Link>; })}</section>}
     {kind==="gallery" && "cards" in data && <><section className="inner-cards gallery-grid">{data.cards.map((card,i)=>{const [name,desc,photo]=card;return <article className="inner-card gallery-card" key={name}><Image src={photo} alt={name} width={1000} height={750} sizes="(max-width: 600px) 86vw, (max-width: 800px) 42vw, 28vw" unoptimized /><div><span>0{i+1}</span><h2>{name}</h2><p>{desc}</p></div></article>;})}</section>{"note" in data && <p className="page-note">{data.note}</p>}</>}
