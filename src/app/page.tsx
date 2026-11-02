@@ -64,7 +64,7 @@ const photos = {
 };
 
 export default function Home() {
-  const [locale, setLocale] = useState<Locale>("en");
+  const [locale, setLocale] = useState<Locale>("el");
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
