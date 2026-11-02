@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -36,6 +36,9 @@ const slugs = Object.keys(collections) as Slug[];
 
 export default function CollectionPage({ slug }: { slug: string }) {
   const [locale,setLocale] = useState<"en"|"el">("en");
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
   if (!slugs.includes(slug as Slug)) return <main className="inner-page"><section className="inner-hero"><h1>Collection not found.</h1><Link href="/creations">Back to creations ↗</Link></section></main>;
   const item = collections[slug as Slug][locale];
   const labels = locale==="en"
