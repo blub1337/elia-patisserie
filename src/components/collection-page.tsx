@@ -37,6 +37,10 @@ const slugs = Object.keys(collections) as Slug[];
 export default function CollectionPage({ slug }: { slug: string }) {
   const [locale,setLocale] = useState<"en"|"el">("el");
   useEffect(() => {
+    const savedLocale = window.localStorage.getItem("elia-locale");
+    if (savedLocale === "en" || savedLocale === "el") setLocale(savedLocale);
+  }, []);
+  useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
   if (!slugs.includes(slug as Slug)) return <main className="inner-page"><section className="inner-hero"><h1>Collection not found.</h1><Link href="/creations">Back to creations ↗</Link></section></main>;
@@ -46,7 +50,7 @@ export default function CollectionPage({ slug }: { slug: string }) {
     : {home:"ΑΡΧΙΚΗ",back:"ΟΛΕΣ ΟΙ ΔΗΜΙΟΥΡΓΙΕΣ",details:"ΠΛΗΡΟΦΟΡΙΕΣ ΣΥΛΛΟΓΗΣ",ingredients:"Συστατικά",allergens:"Αλλεργιογόνα",availability:"Διαθεσιμότητα",pending:"Θα επιβεβαιωθεί από το κατάστημα",contact:"ΕΠΙΚΟΙΝΩΝΙΑ ΓΙΑ ΤΗ ΣΥΛΛΟΓΗ",placeholder:"Οι πληροφορίες προϊόντων θα προστεθούν μόλις επαληθευτούν από την Élia Pâtisserie."};
   return <main className="inner-page collection-page">
     <div className="announcement">✳ {locale==="en"?"A little sweetness, made in Agrinio.":"Μια γλυκιά απόλαυση, φτιαγμένη στο Αγρίνιο."} ✳</div>
-    <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav"><Link href="/">{labels.home}</Link><Link href="/creations">{labels.back}</Link><Link href="/our-story">{locale==="en"?"OUR STORY":"Η ΙΣΤΟΡΙΑ ΜΑΣ"}</Link><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></nav><button className="language-switch" onClick={()=>setLocale(locale==="en"?"el":"en")}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
+    <header className="site-header"><Link className="wordmark" href="/">Élia<span>PÂTISSERIE</span></Link><nav className="inner-nav"><Link href="/">{labels.home}</Link><Link href="/creations">{labels.back}</Link><Link href="/our-story">{locale==="en"?"OUR STORY":"Η ΙΣΤΟΡΙΑ ΜΑΣ"}</Link><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></nav><button className="language-switch" onClick={()=>{ const nextLocale = locale==="en"?"el":"en"; window.localStorage.setItem("elia-locale", nextLocale); setLocale(nextLocale); }}>{locale==="en"?"ΕΛ":"EN"} ↗</button></header>
     <section className="collection-detail-hero"><Image src={item.image} alt={item.kind} width={1400} height={1100} sizes="(max-width: 600px) 100vw, 52vw" priority unoptimized /><div><p className="eyebrow">{item.label}</p><h1>{item.title}</h1><p>{item.intro}</p><Link className="text-link" href="/creations">← {labels.back}</Link></div></section>
     <section className="collection-information"><div className="collection-information-heading"><p className="eyebrow">{labels.details}</p><h2>{item.kind}</h2><p>{item.detail}</p></div><div className="product-facts"><article><span>01</span><h3>{labels.ingredients}</h3><p>{labels.pending}</p></article><article><span>02</span><h3>{labels.allergens}</h3><p>{labels.pending}</p></article><article><span>03</span><h3>{labels.availability}</h3><p>{labels.pending}</p></article></div><p className="product-disclaimer">{labels.placeholder}</p><Link className="button button-dark" href="/contact">{labels.contact} ↗</Link></section>
     <footer><div className="footer-main"><Link className="footer-brand" href="/">Élia<span>PÂTISSERIE</span></Link><p>{locale==="en"?"Made with care. Shared with joy.":"Με φροντίδα δημιουργημένα. Με χαρά μοιρασμένα."}</p><span className="footer-contact">AGRINIO, GREECE</span></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Élia Pâtisserie</span><span>AGRINIO, GREECE</span><div className="footer-legal"><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></div></div></footer>
