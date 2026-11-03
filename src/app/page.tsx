@@ -5,7 +5,7 @@ import { useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 import SiteHeader from "../components/site-header";
-import SocialPlaceholders from "../components/social-placeholders";
+import SiteFooter from "../components/site-footer";
 import ContactInfoSection from "../components/contact-info-section";
 import ScrollEffects from "../components/scroll-effects";
 
@@ -128,12 +128,6 @@ export default function Home(){
 
     <ContactInfoSection locale={locale} />
 
-    <footer className="elia-reference-footer">
-      <Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link>
-      <p>{t.footer}</p>
-      <div><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link></div>
-      <SocialPlaceholders locale={locale} />
-      <small>© {new Date().getFullYear()} Sofia & Stelios Pâtisserie</small>
-    </footer>
+    <SiteFooter locale={locale} />
   </main>;
 }
