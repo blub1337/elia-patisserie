@@ -2716,3 +2716,395 @@ img,svg,video,canvas,iframe{max-width:100%}
     display:none!important;
   }
 }
+
+
+/* Elevated header — a quieter, more refined brand signature */
+.elia-reference-header,
+.inner-page .site-header{
+  background:rgba(251,250,247,.96)!important;
+  border-bottom:1px solid rgba(168,138,93,.22)!important;
+  box-shadow:0 8px 28px rgba(33,29,25,.045)!important;
+  backdrop-filter:saturate(135%) blur(14px);
+  -webkit-backdrop-filter:saturate(135%) blur(14px);
+}
+.elia-reference-header .wordmark,
+.inner-page .site-header .wordmark{
+  font-family:'Bodoni Moda','Cormorant Garamond',Georgia,serif!important;
+  font-size:clamp(30px,2.7vw,38px)!important;
+  font-weight:500!important;
+  letter-spacing:-.065em!important;
+  line-height:.88!important;
+  color:#302820!important;
+  transition:color .25s ease,transform .35s ease!important;
+}
+.elia-reference-header .wordmark:hover,
+.inner-page .site-header .wordmark:hover{
+  color:#9d7d50!important;
+  transform:translateY(-1px);
+}
+.elia-reference-header .wordmark span,
+.inner-page .site-header .wordmark span{
+  margin-top:9px!important;
+  color:#a88a5d!important;
+  font-size:7px!important;
+  font-weight:600!important;
+  letter-spacing:.38em!important;
+}
+@media(min-width:901px){
+  .elia-reference-header .nav-links,
+  .inner-page .site-header .inner-nav{
+    gap:clamp(17px,2.3vw,34px)!important;
+  }
+  .elia-reference-header .nav-links a,
+  .inner-page .site-header .inner-nav a{
+    position:relative!important;
+    padding:9px 0!important;
+    color:#62584e!important;
+    font-size:8px!important;
+    font-weight:600!important;
+    letter-spacing:.13em!important;
+    transition:color .25s ease!important;
+  }
+  .elia-reference-header .nav-links a::after,
+  .inner-page .site-header .inner-nav a::after{
+    content:""!important;
+    position:absolute!important;
+    right:auto!important;
+    bottom:0!important;
+    left:0!important;
+    width:100%!important;
+    height:1px!important;
+    margin:0!important;
+    background:linear-gradient(90deg,#a88a5d,#d9c7aa)!important;
+    transform:scaleX(0)!important;
+    transform-origin:left center!important;
+    transition:transform .32s cubic-bezier(.2,.7,.2,1)!important;
+  }
+  .elia-reference-header .nav-links a:hover,
+  .inner-page .site-header .inner-nav a:hover{
+    color:#9b7c52!important;
+  }
+  .elia-reference-header .nav-links a:hover::after,
+  .inner-page .site-header .inner-nav a:hover::after{
+    right:auto!important;
+    transform:scaleX(1)!important;
+  }
+  .elia-reference-header .language-switch,
+  .inner-page .site-header .language-switch{
+    border:1px solid rgba(168,138,93,.43)!important;
+    background:rgba(255,255,255,.38)!important;
+    color:#62513e!important;
+    letter-spacing:.13em!important;
+    transition:background .25s ease,border-color .25s ease,transform .25s ease!important;
+  }
+  .elia-reference-header .language-switch:hover,
+  .inner-page .site-header .language-switch:hover{
+    border-color:#a88a5d!important;
+    background:#f1e9dd!important;
+    transform:translateY(-1px);
+  }
+}
+
+/* A visible, intentional social-media feature in both footer layouts */
+.footer-social{
+  align-items:center!important;
+  gap:28px!important;
+}
+.footer-social-title{
+  display:block!important;
+  color:#d9c4a4!important;
+  font-size:8px!important;
+  font-weight:700!important;
+  letter-spacing:.2em!important;
+  line-height:1.6!important;
+}
+.footer-social-list{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:12px!important;
+}
+.footer-social-placeholder{
+  display:flex!important;
+  align-items:center!important;
+  gap:13px!important;
+  min-width:174px!important;
+  min-height:62px!important;
+  padding:9px 16px!important;
+  border:1px solid rgba(204,177,137,.38)!important;
+  border-radius:8px!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.018))!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 5px 18px rgba(0,0,0,.08)!important;
+  transition:transform .28s ease,border-color .28s ease,background .28s ease,box-shadow .28s ease!important;
+}
+.footer-social-placeholder:hover{
+  transform:translateY(-4px)!important;
+  border-color:rgba(218,190,150,.78)!important;
+  background:linear-gradient(135deg,rgba(204,177,137,.17),rgba(255,255,255,.035))!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 12px 26px rgba(0,0,0,.16)!important;
+}
+.footer-social-mark{
+  flex:0 0 42px!important;
+  width:42px!important;
+  height:42px!important;
+  border:1px solid rgba(213,185,145,.68)!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 30% 25%,rgba(213,185,145,.24),rgba(213,185,145,.055) 68%)!important;
+  color:#e1c69e!important;
+  box-shadow:0 0 0 4px rgba(185,154,104,.07),0 0 22px rgba(185,154,104,.1)!important;
+  transition:transform .3s ease,background .3s ease,box-shadow .3s ease!important;
+}
+.footer-social-placeholder:hover .footer-social-mark{
+  transform:scale(1.06) rotate(-4deg)!important;
+  background:radial-gradient(circle at 30% 25%,rgba(213,185,145,.38),rgba(213,185,145,.1) 70%)!important;
+  box-shadow:0 0 0 5px rgba(185,154,104,.1),0 0 25px rgba(185,154,104,.19)!important;
+}
+.footer-social-mark-instagram svg{width:21px!important;height:21px!important}
+.footer-social-mark-facebook svg{width:13px!important;height:21px!important}
+.footer-social-copy{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:5px!important;
+}
+.footer-social-copy strong{
+  color:#f8f2e9!important;
+  font-size:10px!important;
+  font-weight:600!important;
+  letter-spacing:.07em!important;
+}
+.footer-social-copy small{
+  color:#c4ad8d!important;
+  font-size:6px!important;
+  font-weight:600!important;
+  letter-spacing:.11em!important;
+}
+
+/* Homepage footer: give the social feature its own full-width row */
+.elia-reference-footer>.footer-social{
+  grid-column:1/-1!important;
+  grid-row:2!important;
+  justify-self:stretch!important;
+  align-self:stretch!important;
+  display:flex!important;
+  width:100%!important;
+  margin:8px 0 0!important;
+  padding:22px 0!important;
+  border-top:1px solid rgba(220,196,163,.22)!important;
+  border-bottom:1px solid rgba(220,196,163,.22)!important;
+}
+.elia-reference-footer>.footer-social .footer-social-title{
+  display:block!important;
+}
+.elia-reference-footer>.footer-social .footer-social-list{
+  flex:0 0 auto!important;
+  width:auto!important;
+}
+.elia-reference-footer>.footer-social .footer-social-placeholder{
+  display:flex!important;
+  width:auto!important;
+  height:auto!important;
+  min-width:174px!important;
+  min-height:62px!important;
+  padding:9px 16px!important;
+  border-radius:8px!important;
+}
+.elia-reference-footer>.footer-social .footer-social-copy{
+  display:flex!important;
+}
+.elia-reference-footer>small{
+  grid-column:1/-1!important;
+  grid-row:3!important;
+  padding-top:17px!important;
+}
+
+/* Restrained entrance motion and image interaction */
+.elia-reference-header{
+  animation:headerArrive .65s cubic-bezier(.2,.7,.2,1) both;
+}
+.elia-reference-hero-copy .eyebrow,
+.elia-reference-hero-copy h1,
+.elia-reference-hero-copy>p:not(.eyebrow),
+.elia-reference-hero-copy .elia-reference-button{
+  animation:heroTextArrive .8s cubic-bezier(.2,.7,.2,1) both;
+}
+.elia-reference-hero-copy h1{animation-delay:100ms}
+.elia-reference-hero-copy>p:not(.eyebrow){animation-delay:190ms}
+.elia-reference-hero-copy .elia-reference-button{animation-delay:280ms}
+.elia-reference-hero>img{
+  animation:heroImageArrive 1.35s cubic-bezier(.2,.7,.2,1) both;
+}
+.elia-reference-about-image,
+.elia-reference-custom-image{
+  overflow:hidden;
+}
+.elia-reference-about-image img,
+.elia-reference-custom-image img{
+  transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .7s ease!important;
+}
+.elia-reference-about-image:hover img,
+.elia-reference-custom-image:hover img{
+  transform:scale(1.035);
+  filter:saturate(1.05);
+}
+.elia-reference-button,
+.elia-reference-text-link,
+.contact-info-inline-link,
+.contact-info-map-footer a{
+  transition:color .25s ease,border-color .25s ease,transform .25s ease!important;
+}
+.elia-reference-button:hover,
+.elia-reference-text-link:hover{
+  color:#d5bd98!important;
+}
+.elia-reference-button span,
+.elia-reference-text-link span{
+  display:inline-block;
+  transition:transform .25s ease!important;
+}
+.elia-reference-button:hover span,
+.elia-reference-text-link:hover span{
+  transform:translate(3px,-2px);
+}
+.elia-reference-card{
+  transition:box-shadow .45s ease,transform .45s cubic-bezier(.2,.7,.2,1)!important;
+}
+.elia-reference-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 38px rgba(33,29,25,.14);
+}
+.inner-card img{
+  transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s ease!important;
+}
+.inner-card:hover img{
+  transform:scale(1.035);
+  filter:saturate(1.04);
+}
+.contact-info-layout{
+  transition:box-shadow .4s ease,transform .4s ease!important;
+}
+.contact-info-layout:hover{
+  transform:translateY(-3px);
+  box-shadow:0 28px 65px rgba(48,32,25,.13)!important;
+}
+
+/* Scroll reveal: elements animate only when they enter the viewport */
+.has-scroll-reveal .scroll-reveal{
+  opacity:0;
+  transform:translateY(24px);
+  filter:blur(2px);
+  transition:
+    opacity .75s cubic-bezier(.2,.7,.2,1) var(--reveal-delay,0ms),
+    transform .75s cubic-bezier(.2,.7,.2,1) var(--reveal-delay,0ms),
+    filter .75s ease var(--reveal-delay,0ms);
+  will-change:opacity,transform;
+}
+.has-scroll-reveal .scroll-reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+  filter:blur(0);
+}
+
+/* Small screens: maintain the hierarchy without squeezing the social cards */
+@media(max-width:700px){
+  .elia-reference-footer>.footer-social{
+    grid-column:1/-1!important;
+    grid-row:4!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    gap:13px!important;
+    margin:5px 0 0!important;
+    padding:18px 0!important;
+  }
+  .elia-reference-footer>.footer-social .footer-social-list{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:9px!important;
+    width:100%!important;
+  }
+  .elia-reference-footer>.footer-social .footer-social-placeholder{
+    min-width:0!important;
+    min-height:59px!important;
+    padding:8px 9px!important;
+    gap:9px!important;
+  }
+  .elia-reference-footer>.footer-social .footer-social-mark{
+    flex-basis:36px!important;
+    width:36px!important;
+    height:36px!important;
+  }
+  .elia-reference-footer>.footer-social .footer-social-copy strong{font-size:9px!important}
+  .elia-reference-footer>.footer-social .footer-social-copy small{font-size:5px!important;letter-spacing:.07em!important}
+  .elia-reference-footer>small{
+    grid-column:1/-1!important;
+    grid-row:5!important;
+  }
+  .inner-page footer>.footer-social{
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    gap:13px!important;
+    margin:4px 0 14px!important;
+    padding:17px 0 16px!important;
+  }
+  .inner-page footer>.footer-social .footer-social-list{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    justify-content:stretch!important;
+    width:100%!important;
+  }
+  .inner-page footer>.footer-social .footer-social-placeholder{
+    min-width:0!important;
+    min-height:59px!important;
+    width:auto!important;
+    height:auto!important;
+    flex:initial!important;
+    padding:8px 9px!important;
+    gap:9px!important;
+  }
+  .inner-page footer>.footer-social .footer-social-mark{
+    flex-basis:36px!important;
+    width:36px!important;
+    height:36px!important;
+  }
+}
+@media(max-width:370px){
+  .footer-social-placeholder{gap:7px!important;padding-inline:7px!important}
+  .footer-social-mark{flex-basis:32px!important;width:32px!important;height:32px!important}
+  .footer-social-copy strong{font-size:8px!important}
+  .footer-social-copy small{font-size:5px!important}
+}
+@keyframes headerArrive{
+  from{opacity:0;transform:translateY(-9px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes heroTextArrive{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes heroImageArrive{
+  from{opacity:.72;transform:scale(1.045)}
+  to{opacity:1;transform:scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+  .elia-reference-header,
+  .elia-reference-hero>img,
+  .elia-reference-hero-copy .eyebrow,
+  .elia-reference-hero-copy h1,
+  .elia-reference-hero-copy>p:not(.eyebrow),
+  .elia-reference-hero-copy .elia-reference-button{
+    animation:none!important;
+  }
+  .has-scroll-reveal .scroll-reveal{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+  }
+  .footer-social-placeholder,
+  .footer-social-mark,
+  .elia-reference-card,
+  .contact-info-layout{
+    transition:none!important;
+  }
+}
