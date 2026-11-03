@@ -7,6 +7,7 @@ import Image from "next/image";
 import SiteHeader from "./site-header";
 import SocialPlaceholders from "./social-placeholders";
 import ContactInfoSection from "./contact-info-section";
+import ScrollEffects from "./scroll-effects";
 
 type PageKind = "creations" | "story" | "custom" | "contact" | "gallery" | "privacy" | "legal";
 const content = {
@@ -39,6 +40,7 @@ export default function BrandPage({ kind }: { kind: PageKind }) {
   }, [locale]);
   const t = content[locale], data = t[kind];
   return <main className="inner-page">
+    <ScrollEffects />
     <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Kalyvia.":"Μια γλυκιά απόλαυση, φτιαγμένη στα Καλύβια."} <span>✳</span></div>
     <SiteHeader variant="inner" />
     <section className="inner-hero"><p className="eyebrow">{data.eyebrow}</p><h1>{data.title}</h1><p>{data.intro}</p></section>
