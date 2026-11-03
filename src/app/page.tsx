@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { saveLocale, useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
+import SiteHeader from "../components/site-header";
 
 const content = {
   en: {
@@ -72,17 +73,11 @@ const photos = {
 export default function Home(){
   const locale=useLocale();
   useEffect(()=>{document.documentElement.lang=locale},[locale]);
-  const [menuOpen,setMenuOpen]=useState(false);
   const t=content[locale];
   const links=["/","/our-story","/creations","/custom-cakes","/gallery","/contact"];
   return <main className="elia-home elia-reference-home">
     <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Kalyvia.":"Μια γλυκιά απόλαυση, φτιαγμένη στα Καλύβια."} <span>✳</span></div>
-    <header className="site-header elia-reference-header">
-      <Link className="wordmark" href="/" aria-label="Sofia & Stelios home">Sofia & Stelios<span>PÂTISSERIE</span></Link>
-      <button className="menu-toggle" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button>
-      <nav className={menuOpen?"nav-links open":"nav-links"}>{t.nav.map((label,i)=><Link key={label} href={links[i]} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</nav>
-      <button className="language-switch" onClick={()=>saveLocale(locale==="en"?"el":"en")} aria-label="Change language">{locale==="en"?"ΕΛ":"EN"} <span>↗</span></button>
-    </header>
+    <SiteHeader variant="home" />
 
     <section className="elia-reference-hero">
       <Image src={photos.hero} alt="Sofia & Stelios pâtisserie selection" fill priority unoptimized sizes="100vw"/>
