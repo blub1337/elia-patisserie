@@ -32,7 +32,7 @@ export default function SiteFooter({ locale }: Props) {
           <p className="site-footer-heading">{greek ? "ΠΟΥ ΘΑ ΜΑΣ ΒΡΕΙΤΕ" : "FIND US"}</p>
           <strong>KALYVIA</strong>
           <span>{greek ? "ΕΛΛΑΔΑ" : "GREECE"}</span>
-          <Link href="/contact">{greek ? "Επικοινωνία" : "Get in touch"} <span aria-hidden="true">↗</span></Link>
+          <Link href="/contact">{greek ? "Επικοινωνία" : "Get in touch"} <span className="editorial-arrow" aria-hidden="true" /></Link>
         </div>
       </div>
 
