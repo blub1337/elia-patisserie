@@ -92,7 +92,7 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
         onClick={switchLanguage}
         aria-label={locale === "en" ? "Switch to Greek" : "Switch to English"}
       >
-        {locale === "en" ? "ΕΛ" : "EN"} <span>↗</span>
+        {locale === "en" ? "ΕΛ" : "EN"}
       </button>
     </header>
   );
