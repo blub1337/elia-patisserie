@@ -5,7 +5,7 @@ import { useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 import SiteHeader from "./site-header";
-import SocialPlaceholders from "./social-placeholders";
+import SiteFooter from "./site-footer";
 import ContactInfoSection from "./contact-info-section";
 import ScrollEffects from "./scroll-effects";
 
@@ -51,6 +51,6 @@ export default function BrandPage({ kind }: { kind: PageKind }) {
     {kind==="custom" && "steps" in data && <section className="steps-grid">{data.steps.map((step)=>{ const [n,title,desc] = step; return <article key={n}><span>{n}</span><h2>{title}</h2><p>{desc}</p></article>; })}{"note" in data && <p className="notice">{data.note}</p>}</section>}
     {kind==="contact" && "body" in data && <section className="contact-panel"><div className="contact-monogram">É</div><p>{data.body}</p>{"note" in data && <strong>{data.note}</strong>}</section>}
     <ContactInfoSection locale={locale} />
-    <footer><div className="footer-main"><Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link><p>{locale==="en"?"Made with care. Shared with joy.":"Με φροντίδα σε κάθε δημιουργία, με χαρά σε κάθε μοίρασμα."}</p><span className="footer-contact">KALYVIA, GREECE</span></div><SocialPlaceholders locale={locale} /><div className="footer-bottom"><span>© {new Date().getFullYear()} Sofia & Stelios Pâtisserie</span><span>KALYVIA, GREECE</span><div className="footer-legal"><Link href="/gallery">{locale==="en"?"GALLERY":"ΦΩΤΟΓΡΑΦΙΕΣ"}</Link><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></div></div></footer>
+    <SiteFooter locale={locale} />
   </main>;
 }
