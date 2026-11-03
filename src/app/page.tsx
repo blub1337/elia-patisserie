@@ -100,7 +100,7 @@ export default function Home(){
         <p className="eyebrow">{t.aboutLabel}</p>
         <h2>{t.aboutTitle}</h2>
         <p>{t.aboutText}</p>
-        <Link href="/our-story" className="elia-reference-text-link">{t.aboutLink}<span>↗</span></Link>
+        <Link href="/our-story" className="elia-reference-text-link">{t.aboutLink}<span className="editorial-arrow" aria-hidden="true" /></Link>
       </div>
       <div className="elia-reference-about-image"><Image src={photos.about} alt="Freshly prepared pâtisserie" fill unoptimized sizes="(max-width:760px) 100vw, 50vw"/></div>
     </section>
@@ -109,21 +109,21 @@ export default function Home(){
       <div className="elia-reference-heading"><div><p className="eyebrow">{t.galleryLabel}</p><h2>{t.galleryTitle}</h2></div><p>{t.galleryText}</p></div>
       <div className="elia-reference-grid">
         <Link href="/creations/signature-patisserie" className="elia-reference-card elia-reference-card-large"><Image src={photos.pastry} alt={t.collection[0]} fill unoptimized sizes="(max-width:760px) 100vw, 50vw"/><span>{t.collection[0]}<i className="editorial-arrow" aria-hidden="true" /></span></Link>
-        <Link href="/creations/cakes-tarts" className="elia-reference-card"><Image src={photos.cake} alt={t.collection[1]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[1]}<i>↗</i></span></Link>
-        <Link href="/creations/viennoiserie" className="elia-reference-card"><Image src={photos.viennoiserie} alt={t.collection[2]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[2]}<i>↗</i></span></Link>
+        <Link href="/creations/cakes-tarts" className="elia-reference-card"><Image src={photos.cake} alt={t.collection[1]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[1]}<i className="editorial-arrow" aria-hidden="true" /></span></Link>
+        <Link href="/creations/viennoiserie" className="elia-reference-card"><Image src={photos.viennoiserie} alt={t.collection[2]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[2]}<i className="editorial-arrow" aria-hidden="true" /></span></Link>
       </div>
-      <Link href="/gallery" className="elia-reference-text-link elia-reference-all">{t.galleryLink}<span>↗</span></Link>
+      <Link href="/gallery" className="elia-reference-text-link elia-reference-all">{t.galleryLink}<span className="editorial-arrow" aria-hidden="true" /></Link>
     </section>
 
     <section className="elia-reference-custom">
       <div className="elia-reference-custom-image"><Image src={photos.custom} alt="A custom celebration cake" fill unoptimized sizes="(max-width:760px) 100vw, 55vw"/></div>
-      <div className="elia-reference-custom-copy"><p className="eyebrow">{t.customLabel}</p><h2>{t.customTitle}</h2><p>{t.customText}</p><Link href="/custom-cakes" className="elia-reference-button elia-reference-button-dark">{t.customCta}<span>↗</span></Link></div>
+      <div className="elia-reference-custom-copy"><p className="eyebrow">{t.customLabel}</p><h2>{t.customTitle}</h2><p>{t.customText}</p><Link href="/custom-cakes" className="elia-reference-button elia-reference-button-dark">{t.customCta}<span className="editorial-arrow" aria-hidden="true" /></Link></div>
     </section>
 
     <section className="elia-reference-contact">
       <p className="eyebrow">SOFIA & STELIOS PÂTISSERIE · KALYVIA</p>
       <h2>{t.closingTitle}</h2><p>{t.closingText}</p>
-      <Link href="/contact" className="elia-reference-text-link">{t.contact}<span>↗</span></Link>
+      <Link href="/contact" className="elia-reference-text-link">{t.contact}<span className="editorial-arrow" aria-hidden="true" /></Link>
     </section>
 
     <ContactInfoSection locale={locale} />
