@@ -3108,3 +3108,15 @@ img,svg,video,canvas,iframe{max-width:100%}
     transition:none!important;
   }
 }
+
+@media(max-width:600px){
+  .elia-reference-header .wordmark,
+  .inner-page .site-header .wordmark{
+    font-size:24px!important;
+  }
+  .elia-reference-header .wordmark span,
+  .inner-page .site-header .wordmark span{
+    font-size:6px!important;
+    letter-spacing:.34em!important;
+  }
+}
