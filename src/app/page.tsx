@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SiteHeader from "../components/site-header";
 import SocialPlaceholders from "../components/social-placeholders";
+import ContactInfoSection from "../components/contact-info-section";
 
 const content = {
   en: {
@@ -122,6 +123,8 @@ export default function Home(){
       <h2>{t.closingTitle}</h2><p>{t.closingText}</p>
       <Link href="/contact" className="elia-reference-text-link">{t.contact}<span>↗</span></Link>
     </section>
+
+    <ContactInfoSection locale={locale} />
 
     <footer className="elia-reference-footer">
       <Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link>
