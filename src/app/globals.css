@@ -3621,3 +3621,37 @@ img,svg,video,canvas,iframe{max-width:100%}
 @media(max-width:600px){
   .site-footer-credit .site-footer-credit-domain{font-size:7px!important}
 }
+
+
+/* Sofia & Stelios — refined line arrows, replacing emoji-style glyphs */
+.editorial-arrow{
+  display:inline-block;
+  position:relative;
+  width:14px;
+  height:1px;
+  flex:0 0 14px;
+  background:currentColor;
+  vertical-align:middle;
+  opacity:.88;
+  font-size:0!important;
+  line-height:0;
+  transition:transform .25s ease,opacity .25s ease;
+}
+.editorial-arrow::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:-3px;
+  width:6px;
+  height:6px;
+  border-top:1px solid currentColor;
+  border-right:1px solid currentColor;
+  transform:rotate(45deg);
+}
+.editorial-arrow-left{transform:scaleX(-1)}
+.elia-reference-card>span .editorial-arrow{margin-left:12px}
+.site-footer-location .editorial-arrow{margin-left:6px}
+@media(max-width:700px){
+  .editorial-arrow{width:12px;flex-basis:12px}
+  .elia-reference-card>span .editorial-arrow{margin-left:9px}
+}
