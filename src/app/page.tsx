@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { saveLocale, useLocale } from "../lib/locale";
+import { useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 import SiteHeader from "../components/site-header";
