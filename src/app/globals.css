@@ -1800,3 +1800,44 @@ img,svg,video,canvas,iframe{max-width:100%}
   .elia-reference-header .mobile-menu-toggle,
   .inner-page .site-header .mobile-menu-toggle{display:none!important}
 }
+
+
+/* Social brand marks — clean vector treatment */
+.footer-social-mark{
+  display:grid!important;
+  place-items:center!important;
+  flex:0 0 36px!important;
+  width:36px!important;
+  height:36px!important;
+  border:1px solid rgba(185,154,104,.48)!important;
+  border-radius:50%!important;
+  background:rgba(255,255,255,.035)!important;
+  color:#d8c09a!important;
+  font-size:0!important;
+  line-height:1!important;
+}
+.footer-social-mark svg{
+  display:block;
+  flex:none;
+  max-width:none;
+  max-height:none;
+}
+.footer-social-mark-instagram svg{
+  width:19px;
+  height:19px;
+}
+.footer-social-mark-facebook svg{
+  width:12px;
+  height:19px;
+}
+.footer-social-mark-facebook{
+  font-family:inherit!important;
+  font-size:0!important;
+  font-weight:400!important;
+}
+.footer-social-placeholder{
+  min-height:56px;
+  border-color:rgba(247,245,241,.16)!important;
+  background:rgba(255,255,255,.018);
+  transition:border-color .2s ease,background .2s ease;
+}
