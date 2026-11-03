@@ -2407,3 +2407,106 @@ img,svg,video,canvas,iframe{max-width:100%}
   }
   .mobile-nav-arrow{display:none!important}
 }
+
+
+/* Bilingual contact information section above the footer */
+.contact-info-section{
+  padding:88px 8% 92px;
+  background:#eee6da;
+  color:var(--espresso);
+}
+.contact-info-heading{
+  max-width:1100px;
+  margin:0 auto 34px;
+  text-align:center;
+}
+.contact-info-heading .eyebrow{margin:0 0 12px}
+.contact-info-heading h2{
+  margin:0;
+  font:400 clamp(42px,5vw,58px)/1 'Cormorant Garamond',serif;
+}
+.contact-info-heading>span{
+  display:inline-block;
+  margin-top:13px;
+  color:#897969;
+  font-size:9px;
+  letter-spacing:.06em;
+}
+.contact-info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1.15fr;
+  gap:16px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.contact-info-card{
+  min-width:0;
+  padding:27px 25px 25px;
+  border:1px solid rgba(125,101,76,.2);
+  background:rgba(251,249,245,.62);
+}
+.contact-info-card>svg{
+  display:block;
+  width:22px;
+  height:22px;
+  margin-bottom:22px;
+  fill:none;
+  stroke:var(--gold);
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.contact-info-label{
+  margin:0 0 9px;
+  color:#9a8060;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.contact-info-card h3{
+  margin:0;
+  font:500 clamp(19px,2vw,24px)/1.25 'Cormorant Garamond',serif;
+  overflow-wrap:anywhere;
+}
+.contact-info-card h3 a{color:inherit}
+.contact-info-card>a{
+  display:inline-flex;
+  gap:10px;
+  margin-top:16px;
+  padding-bottom:5px;
+  border-bottom:1px solid var(--gold);
+  color:#75675b;
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.08em;
+}
+.contact-info-card>a span{color:var(--gold);font-size:13px}
+.contact-hours-list{display:grid;gap:8px}
+.contact-hours-list p{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin:0;
+  padding-bottom:7px;
+  border-bottom:1px solid rgba(125,101,76,.13);
+  color:#75675b;
+  font-size:9px;
+  line-height:1.4;
+}
+.contact-hours-list p:last-child{padding-bottom:0;border:0}
+.contact-hours-list strong{color:var(--espresso);font-weight:600;text-align:right;white-space:nowrap}
+@media(max-width:800px){
+ .contact-info-section{padding:70px 7%}
+ .contact-info-grid{grid-template-columns:1fr 1fr}
+ .contact-info-hours{grid-column:1/-1}
+}
+@media(max-width:560px){
+ .contact-info-section{padding:62px 6%}
+ .contact-info-heading{margin-bottom:26px}
+ .contact-info-grid{grid-template-columns:1fr;gap:11px}
+ .contact-info-hours{grid-column:auto}
+ .contact-info-card{padding:22px}
+ .contact-info-card>svg{margin-bottom:15px}
+ .contact-hours-list p{font-size:10px}
+}
