@@ -3608,3 +3608,16 @@ img,svg,video,canvas,iframe{max-width:100%}
     width:auto!important;
   }
 }
+
+.site-footer-credit .site-footer-credit-domain{
+  color:#a99d90!important;
+  font-size:7px!important;
+  font-weight:500!important;
+  letter-spacing:.04em!important;
+}
+.site-footer-credit .site-footer-credit-domain:hover{
+  color:#e0c49a!important;
+}
+@media(max-width:600px){
+  .site-footer-credit .site-footer-credit-domain{font-size:7px!important}
+}
