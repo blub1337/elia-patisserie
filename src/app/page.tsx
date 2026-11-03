@@ -7,6 +7,7 @@ import Image from "next/image";
 import SiteHeader from "../components/site-header";
 import SocialPlaceholders from "../components/social-placeholders";
 import ContactInfoSection from "../components/contact-info-section";
+import ScrollEffects from "../components/scroll-effects";
 
 const content = {
   en: {
@@ -78,6 +79,7 @@ export default function Home(){
   const t=content[locale];
   const links=["/","/our-story","/creations","/custom-cakes","/gallery","/contact"];
   return <main className="elia-home elia-reference-home">
+    <ScrollEffects />
     <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Kalyvia.":"Μια γλυκιά απόλαυση, φτιαγμένη στα Καλύβια."} <span>✳</span></div>
     <SiteHeader variant="home" />
 
