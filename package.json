@@ -1,0 +1,30 @@
+{
+  "name": "elia-patisserie",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "cloudflare:build": "opennextjs-cloudflare build",
+    "cloudflare:preview": "opennextjs-cloudflare build && wrangler dev",
+    "cloudflare:deploy:preview": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "typescript": "^5.9.0",
+    "@opennextjs/cloudflare": "^1.20.13",
+    "wrangler": "^4.156.0"
+  }
+}
