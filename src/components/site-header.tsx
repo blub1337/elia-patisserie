@@ -81,7 +81,7 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
         <div className="mobile-nav-bottom">
           <span>{locale === "en" ? "LANGUAGE" : "ΓΛΩΣΣΑ"}</span>
           <button className="mobile-nav-language" type="button" onClick={switchLanguage}>
-            {locale === "en" ? "ΕΛΛΗΝΙΚΑ" : "ENGLISH"} <span aria-hidden="true">↗</span>
+            {locale === "en" ? "ΕΛΛΗΝΙΚΑ" : "ENGLISH"}
           </button>
         </div>
       </nav>
