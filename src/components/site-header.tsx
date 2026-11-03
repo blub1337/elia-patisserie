@@ -60,6 +60,7 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
         <span className={"menu-toggle-bars" + (menuOpen ? " is-open" : "")} aria-hidden="true">
           <i /><i /><i />
         </span>
+        <span className="menu-toggle-label">{menuOpen ? (locale === "en" ? "CLOSE" : "ΚΛΕΙΣΙΜΟ") : (locale === "en" ? "MENU" : "ΜΕΝΟΥ")}</span>
       </button>
 
       <nav
@@ -67,9 +68,15 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
         aria-label={locale === "en" ? "Main navigation" : "Κύρια πλοήγηση"}
         className={(isHome ? "nav-links" : "inner-nav") + (menuOpen ? " open" : "")}
       >
-        {items.map(([label, url]) => (
+        <div className="mobile-nav-heading">
+          <span className="mobile-nav-rule" />
+          {locale === "en" ? "EXPLORE SOFIA & STELIOS" : "ΑΝΑΚΑΛΥΨΤΕ ΤΗ SOFIA & STELIOS"}
+        </div>
+        {items.map(([label, url], index) => (
           <Link key={url} href={url} onClick={() => setMenuOpen(false)}>
-            {label}
+            <span className="mobile-nav-index">{String(index + 1).padStart(2, "0")}</span>
+            <span className="mobile-nav-label">{label}</span>
+            <span className="mobile-nav-arrow" aria-hidden="true">↗</span>
           </Link>
         ))}
         <div className="mobile-nav-bottom">
