@@ -90,7 +90,7 @@ export default function Home(){
         <p className="eyebrow">{t.eyebrow}</p>
         <h1>{t.title}</h1>
         <p>{t.intro}</p>
-        <Link href="/creations" className="elia-reference-button">{t.cta}<span>↗</span></Link>
+        <Link href="/creations" className="elia-reference-button">{t.cta}<span className="editorial-arrow" aria-hidden="true" /></Link>
       </div>
       <span className="elia-reference-hero-caption">SOFIA & STELIOS PÂTISSERIE · KALYVIA, GREECE</span>
     </section>
@@ -108,7 +108,7 @@ export default function Home(){
     <section className="elia-reference-gallery">
       <div className="elia-reference-heading"><div><p className="eyebrow">{t.galleryLabel}</p><h2>{t.galleryTitle}</h2></div><p>{t.galleryText}</p></div>
       <div className="elia-reference-grid">
-        <Link href="/creations/signature-patisserie" className="elia-reference-card elia-reference-card-large"><Image src={photos.pastry} alt={t.collection[0]} fill unoptimized sizes="(max-width:760px) 100vw, 50vw"/><span>{t.collection[0]}<i>↗</i></span></Link>
+        <Link href="/creations/signature-patisserie" className="elia-reference-card elia-reference-card-large"><Image src={photos.pastry} alt={t.collection[0]} fill unoptimized sizes="(max-width:760px) 100vw, 50vw"/><span>{t.collection[0]}<i className="editorial-arrow" aria-hidden="true" /></span></Link>
         <Link href="/creations/cakes-tarts" className="elia-reference-card"><Image src={photos.cake} alt={t.collection[1]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[1]}<i>↗</i></span></Link>
         <Link href="/creations/viennoiserie" className="elia-reference-card"><Image src={photos.viennoiserie} alt={t.collection[2]} fill unoptimized sizes="(max-width:760px) 100vw, 40vw"/><span>{t.collection[2]}<i>↗</i></span></Link>
       </div>
