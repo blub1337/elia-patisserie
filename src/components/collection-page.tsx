@@ -42,7 +42,7 @@ export default function CollectionPage({ slug }: { slug: string }) {
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
-  if (!slugs.includes(slug as Slug)) return <main className="inner-page"><section className="inner-hero"><h1>Collection not found.</h1><Link href="/creations">Back to creations ↗</Link></section></main>;
+  if (!slugs.includes(slug as Slug)) return <main className="inner-page"><section className="inner-hero"><h1>Collection not found.</h1><Link href="/creations">Back to creations <span className="editorial-arrow" aria-hidden="true" /></Link></section></main>;
   const item = collections[slug as Slug][locale];
   const labels = locale==="en"
     ? {home:"HOME",back:"ALL CREATIONS",details:"COLLECTION DETAILS",ingredients:"Ingredients",allergens:"Allergens",availability:"Availability",pending:"To be confirmed by the bakery",contact:"ENQUIRE ABOUT THIS COLLECTION",placeholder:"Product information will appear here once verified by Sofia & Stelios Pâtisserie."}
@@ -50,8 +50,8 @@ export default function CollectionPage({ slug }: { slug: string }) {
   return <main className="inner-page collection-page">
     <div className="announcement"><span>✳</span> {locale==="en"?"A little sweetness, made in Kalyvia.":"Μια γλυκιά απόλαυση, φτιαγμένη στα Καλύβια."} <span>✳</span></div>
     <SiteHeader variant="inner" />
-    <section className="collection-detail-hero"><Image src={item.image} alt={item.kind} width={1400} height={1100} sizes="(max-width: 600px) 100vw, 52vw" priority unoptimized /><div><p className="eyebrow">{item.label}</p><h1>{item.title}</h1><p>{item.intro}</p><Link className="text-link" href="/creations">← {labels.back}</Link></div></section>
-    <section className="collection-information"><div className="collection-information-heading"><p className="eyebrow">{labels.details}</p><h2>{item.kind}</h2><p>{item.detail}</p></div><div className="product-facts"><article><span>01</span><h3>{labels.ingredients}</h3><p>{labels.pending}</p></article><article><span>02</span><h3>{labels.allergens}</h3><p>{labels.pending}</p></article><article><span>03</span><h3>{labels.availability}</h3><p>{labels.pending}</p></article></div><p className="product-disclaimer">{labels.placeholder}</p><Link className="button button-dark" href="/contact">{labels.contact} ↗</Link></section>
+    <section className="collection-detail-hero"><Image src={item.image} alt={item.kind} width={1400} height={1100} sizes="(max-width: 600px) 100vw, 52vw" priority unoptimized /><div><p className="eyebrow">{item.label}</p><h1>{item.title}</h1><p>{item.intro}</p><Link className="text-link" href="/creations"><span className="editorial-arrow editorial-arrow-left" aria-hidden="true" /> {labels.back}</Link></div></section>
+    <section className="collection-information"><div className="collection-information-heading"><p className="eyebrow">{labels.details}</p><h2>{item.kind}</h2><p>{item.detail}</p></div><div className="product-facts"><article><span>01</span><h3>{labels.ingredients}</h3><p>{labels.pending}</p></article><article><span>02</span><h3>{labels.allergens}</h3><p>{labels.pending}</p></article><article><span>03</span><h3>{labels.availability}</h3><p>{labels.pending}</p></article></div><p className="product-disclaimer">{labels.placeholder}</p><Link className="button button-dark" href="/contact">{labels.contact}<span className="editorial-arrow" aria-hidden="true" /></Link></section>
     <SiteFooter locale={locale} />
   </main>;
 }
