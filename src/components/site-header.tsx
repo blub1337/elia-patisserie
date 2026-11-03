@@ -7,18 +7,18 @@ import { saveLocale, useLocale } from "../lib/locale";
 const navigation = {
   en: [
     ["Home", "/"],
-    ["About", "/our-story"],
     ["Creations", "/creations"],
     ["Custom cakes", "/custom-cakes"],
     ["Gallery", "/gallery"],
+    ["About", "/our-story"],
     ["Contact", "/contact"]
   ],
   el: [
     ["Αρχική", "/"],
-    ["Σχετικά με εμάς", "/our-story"],
     ["Δημιουργίες", "/creations"],
     ["Τούρτες κατά παραγγελία", "/custom-cakes"],
     ["Φωτογραφίες", "/gallery"],
+    ["Σχετικά με εμάς", "/our-story"],
     ["Επικοινωνία", "/contact"]
   ]
 } as const;
