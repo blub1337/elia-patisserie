@@ -5,6 +5,7 @@ import { useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 import SiteHeader from "../components/site-header";
+import SocialPlaceholders from "../components/social-placeholders";
 
 const content = {
   en: {
@@ -126,6 +127,7 @@ export default function Home(){
       <Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link>
       <p>{t.footer}</p>
       <div><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link></div>
+      <SocialPlaceholders locale={locale} />
       <small>© {new Date().getFullYear()} Sofia & Stelios Pâtisserie</small>
     </footer>
   </main>;
