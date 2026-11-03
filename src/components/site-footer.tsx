@@ -51,6 +51,9 @@ export default function SiteFooter({ locale }: Props) {
           <a href="https://webdesigne.vydas.net" target="_blank" rel="noopener noreferrer">
             Georgios Pseimadas
           </a>
+          <a className="site-footer-credit-domain" href="https://webdesigne.vydas.net" target="_blank" rel="noopener noreferrer">
+            webdesigne.vydas.net
+          </a>
         </p>
       </div>
     </footer>
