@@ -5,6 +5,7 @@ import { useLocale } from "../lib/locale";
 import Link from "next/link";
 import Image from "next/image";
 import SiteHeader from "./site-header";
+import SocialPlaceholders from "./social-placeholders";
 
 const collections = {
   "signature-patisserie": {
@@ -51,6 +52,6 @@ export default function CollectionPage({ slug }: { slug: string }) {
     <SiteHeader variant="inner" />
     <section className="collection-detail-hero"><Image src={item.image} alt={item.kind} width={1400} height={1100} sizes="(max-width: 600px) 100vw, 52vw" priority unoptimized /><div><p className="eyebrow">{item.label}</p><h1>{item.title}</h1><p>{item.intro}</p><Link className="text-link" href="/creations">← {labels.back}</Link></div></section>
     <section className="collection-information"><div className="collection-information-heading"><p className="eyebrow">{labels.details}</p><h2>{item.kind}</h2><p>{item.detail}</p></div><div className="product-facts"><article><span>01</span><h3>{labels.ingredients}</h3><p>{labels.pending}</p></article><article><span>02</span><h3>{labels.allergens}</h3><p>{labels.pending}</p></article><article><span>03</span><h3>{labels.availability}</h3><p>{labels.pending}</p></article></div><p className="product-disclaimer">{labels.placeholder}</p><Link className="button button-dark" href="/contact">{labels.contact} ↗</Link></section>
-    <footer><div className="footer-main"><Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link><p>{locale==="en"?"Made with care. Shared with joy.":"Με φροντίδα σε κάθε δημιουργία, με χαρά σε κάθε μοίρασμα."}</p><span className="footer-contact">KALYVIA, GREECE</span></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Sofia & Stelios Pâtisserie</span><span>KALYVIA, GREECE</span><div className="footer-legal"><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></div></div></footer>
+    <footer><div className="footer-main"><Link className="footer-brand" href="/">Sofia & Stelios<span>PÂTISSERIE</span></Link><p>{locale==="en"?"Made with care. Shared with joy.":"Με φροντίδα σε κάθε δημιουργία, με χαρά σε κάθε μοίρασμα."}</p><span className="footer-contact">KALYVIA, GREECE</span></div><SocialPlaceholders locale={locale} /><div className="footer-bottom"><span>© {new Date().getFullYear()} Sofia & Stelios Pâtisserie</span><span>KALYVIA, GREECE</span><div className="footer-legal"><Link href="/privacy">{locale==="en"?"PRIVACY":"ΑΠΟΡΡΗΤΟ"}</Link><Link href="/legal">{locale==="en"?"LEGAL":"ΝΟΜΙΚΑ"}</Link><Link href="/contact">{locale==="en"?"CONTACT":"ΕΠΙΚΟΙΝΩΝΙΑ"}</Link></div></div></footer>
   </main>;
 }
