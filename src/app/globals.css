@@ -2397,3 +2397,13 @@ img,svg,video,canvas,iframe{max-width:100%}
   }
   .mobile-nav-label{font-size:clamp(19px,5.4vw,23px)!important}
 }
+
+
+/* Mobile menu: remove decorative arrows beside navigation labels */
+@media(max-width:900px){
+  .elia-reference-header .nav-links a,
+  .inner-page .site-header .inner-nav a{
+    grid-template-columns:25px minmax(0,1fr)!important;
+  }
+  .mobile-nav-arrow{display:none!important}
+}
