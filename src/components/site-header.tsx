@@ -76,7 +76,6 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
           <Link key={url} href={url} onClick={() => setMenuOpen(false)}>
             <span className="mobile-nav-index">{String(index + 1).padStart(2, "0")}</span>
             <span className="mobile-nav-label">{label}</span>
-            <span className="mobile-nav-arrow" aria-hidden="true">↗</span>
           </Link>
         ))}
         <div className="mobile-nav-bottom">
