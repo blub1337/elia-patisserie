@@ -31,16 +31,11 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
 
   useEffect(() => {
     if (!menuOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMenuOpen(false);
     };
     window.addEventListener("keydown", closeOnEscape);
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", closeOnEscape);
-    };
+    return () => window.removeEventListener("keydown", closeOnEscape);
   }, [menuOpen]);
 
   const switchLanguage = () => {
@@ -72,15 +67,9 @@ export default function SiteHeader({ variant = "inner" }: { variant?: "home" | "
         aria-label={locale === "en" ? "Main navigation" : "Κύρια πλοήγηση"}
         className={(isHome ? "nav-links" : "inner-nav") + (menuOpen ? " open" : "")}
       >
-        <div className="mobile-nav-heading">
-          <span>{locale === "en" ? "EXPLORE SOFIA & STELIOS" : "ΑΝΑΚΑΛΥΨΤΕ ΤΟΝ ΚΟΣΜΟ ΜΑΣ"}</span>
-          <span className="mobile-nav-rule" />
-        </div>
-        {items.map(([label, url], index) => (
+        {items.map(([label, url]) => (
           <Link key={url} href={url} onClick={() => setMenuOpen(false)}>
-            <span className="mobile-nav-index">{String(index + 1).padStart(2, "0")}</span>
-            <span className="mobile-nav-label">{label}</span>
-            <span className="mobile-nav-arrow" aria-hidden="true">↗</span>
+            {label}
           </Link>
         ))}
         <div className="mobile-nav-bottom">
