@@ -3584,3 +3584,27 @@ img,svg,video,canvas,iframe{max-width:100%}
   .site-footer-credit a,
   .site-footer .footer-social-placeholder{transition:none!important}
 }
+
+
+/* Ensure legacy inner-page footer rules cannot hide the unified social labels */
+.inner-page .site-footer>.footer-social .footer-social-title{
+  display:block!important;
+}
+.inner-page .site-footer>.footer-social .footer-social-copy{
+  display:flex!important;
+}
+.inner-page .site-footer>.footer-social .footer-social-placeholder{
+  flex:0 1 220px!important;
+}
+@media(max-width:600px){
+  .inner-page .site-footer>.footer-social .footer-social-title{
+    display:block!important;
+  }
+  .inner-page .site-footer>.footer-social .footer-social-copy{
+    display:flex!important;
+  }
+  .inner-page .site-footer>.footer-social .footer-social-placeholder{
+    flex:initial!important;
+    width:auto!important;
+  }
+}
