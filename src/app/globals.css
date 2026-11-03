@@ -1190,3 +1190,77 @@ footer,.elia-footer{background:#302b27;color:#f7f5f1}
     padding:0!important;
   }
 }
+
+
+/* Mobile stability: prevent wide content from moving the whole document sideways. */
+html,body{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+}
+body{position:relative}
+main,.inner-page,.elia-home,section,header,footer{
+  min-width:0;
+  max-width:100%;
+}
+img,svg,video,canvas,iframe{max-width:100%}
+@media(max-width:900px){
+  .inner-page .site-header{
+    overflow:visible;
+  }
+  .inner-page .inner-hero,
+  .inner-page .collection-detail-hero{
+    grid-template-columns:minmax(0,1fr)!important;
+    min-width:0;
+  }
+  .inner-page .inner-hero>img,
+  .inner-page .collection-detail-hero>img{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+  }
+  .inner-page .collection-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    min-width:0;
+  }
+  .inner-page .collection-card,
+  .inner-page .collection-photo,
+  .inner-page .inner-card{min-width:0;max-width:100%}
+  .inner-page .inner-prose,
+  .inner-page .policy-content,
+  .inner-page .steps-grid,
+  .inner-page .product-facts{min-width:0;max-width:100%}
+  .inner-page .footer-main,
+  .inner-page .footer-bottom{
+    flex-wrap:wrap;
+    gap:18px;
+    min-width:0;
+  }
+  .intro-section,.celebration-section,
+  .elia-reference-about,.elia-reference-custom{
+    min-width:0;
+  }
+}
+@media(max-width:600px){
+  .inner-page .collection-grid{grid-template-columns:minmax(0,1fr)!important}
+  .inner-page .inner-hero,
+  .inner-page .collection-detail-hero{
+    padding-inline:6%!important;
+  }
+  .inner-page .inner-hero h1,
+  .inner-page .collection-detail-hero h1,
+  .inner-page h1,.inner-page h2{
+    overflow-wrap:anywhere;
+  }
+  .inner-page .inner-prose,
+  .inner-page .policy-content,
+  .inner-page .steps-grid,
+  .inner-page .contact-panel,
+  .inner-page .collection-information{
+    padding-inline:6%!important;
+  }
+  .inner-page footer{padding-inline:6%!important}
+  .intro-section,.celebration-section{grid-template-columns:minmax(0,1fr)!important}
+  .collection-grid{grid-template-columns:minmax(0,1fr)!important}
+  .footer-main,.footer-bottom{flex-wrap:wrap;gap:16px}
+}
